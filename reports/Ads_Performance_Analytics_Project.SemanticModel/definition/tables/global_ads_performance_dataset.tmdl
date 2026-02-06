@@ -1,0 +1,150 @@
+table global_ads_performance_dataset
+	lineageTag: a8094e94-da0b-4497-a1cf-e867804e60a8
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 89237c57-2933-476e-a387-bcc2f807908e
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variación
+			isDefault
+			relationship: 9de99fda-9122-4229-bd8f-f0f428eb8e28
+			defaultHierarchy: LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column platform
+		dataType: string
+		lineageTag: de2f949a-ee04-4715-844c-df6e30e09f4d
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column campaign_type
+		dataType: string
+		lineageTag: e2cb839a-7a46-45dd-a879-bee384ff8379
+		summarizeBy: none
+		sourceColumn: campaign_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column industry
+		dataType: string
+		lineageTag: b3c54e63-9293-4e46-96c7-2b73f5844973
+		summarizeBy: none
+		sourceColumn: industry
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 009db176-b0ab-4b33-89a6-b18cc8490e78
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column impressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 46bc8f61-95d9-4956-a04e-ea58b170a096
+		summarizeBy: sum
+		sourceColumn: impressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column clicks
+		dataType: int64
+		formatString: 0
+		lineageTag: a58201b8-0e11-4998-b241-6895298bb267
+		summarizeBy: sum
+		sourceColumn: clicks
+
+		annotation SummarizationSetBy = Automatic
+
+	column CTR
+		dataType: double
+		lineageTag: ef4d050f-7c3c-4fb7-8e91-73e478de15c6
+		summarizeBy: sum
+		sourceColumn: CTR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CPC
+		dataType: double
+		lineageTag: 62c5c060-ef44-4164-a225-c4a65a20e502
+		summarizeBy: sum
+		sourceColumn: CPC
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ad_spend
+		dataType: double
+		lineageTag: 1955c041-24bb-4640-97db-07eba2f50c67
+		summarizeBy: sum
+		sourceColumn: ad_spend
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: bbe5b117-9331-4b1c-a38a-650f4beb9c53
+		summarizeBy: sum
+		sourceColumn: conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column CPA
+		dataType: double
+		lineageTag: c3d4f316-dc0e-4554-8da1-df8fc7868944
+		summarizeBy: sum
+		sourceColumn: CPA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue
+		dataType: double
+		lineageTag: 17740063-74b2-482d-9df1-d0b13b90008a
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROAS
+		dataType: double
+		lineageTag: 93c91180-eba7-4655-8d98-b48cca1acaac
+		summarizeBy: sum
+		sourceColumn: ROAS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition global_ads_performance_dataset = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power--BI--global-ads-performance-analysis\data\global_ads_performance_dataset.csv"),[Delimiter=",", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"date", type date}, {"platform", type text}, {"campaign_type", type text}, {"industry", type text}, {"country", type text}, {"impressions", Int64.Type}, {"clicks", Int64.Type}, {"CTR", type number}, {"CPC", type number}, {"ad_spend", type number}, {"conversions", Int64.Type}, {"CPA", type number}, {"revenue", type number}, {"ROAS", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

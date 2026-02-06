@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Ads_Performance_Analytics_Project"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "955c7ab9-574e-4859-b9b0-23c226e1b8d9"
+  }
+}
