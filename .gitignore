@@ -1,0 +1,4 @@
+# Power BI temporals
+*.tmp
+*.log
+*.pbit
