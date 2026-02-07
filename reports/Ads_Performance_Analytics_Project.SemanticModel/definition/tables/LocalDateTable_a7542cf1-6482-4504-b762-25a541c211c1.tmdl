@@ -110,7 +110,7 @@ table LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1
 
 	partition LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1 = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('global_ads_performance_dataset'[date])), 1, 1), Date(Year(MAX('global_ads_performance_dataset'[date])), 12, 31))
+		source = Calendar(Date(Year(MIN('global_ads_performance'[date])), 1, 1), Date(Year(MAX('global_ads_performance'[date])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 

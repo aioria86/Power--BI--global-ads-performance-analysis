@@ -1,0 +1,157 @@
+table Dim_Calendar
+	lineageTag: f4d03961-1773-4e41-93af-be4ead0fc64b
+
+	column Date
+		dataType: string
+		lineageTag: 55838958-f939-4a37-af44-44c2828fcea8
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: c466a09f-4809-4174-ba3a-c4d7218d89b2
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: a9f0be4f-e260-4ecc-8b44-92d038b084ef
+		summarizeBy: sum
+		sourceColumn: Month Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: 79ca4875-d80e-4e35-ad41-783eb3ff9910
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Short'
+		dataType: string
+		lineageTag: 7ca44778-93d1-4aa8-80e5-1a818177e7a4
+		summarizeBy: none
+		sourceColumn: Month Short
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year-Month
+		dataType: string
+		lineageTag: 87d03e8a-b12d-4e5f-bb0d-5a06621891ed
+		summarizeBy: none
+		sourceColumn: Year-Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e17c111-37a0-400d-b14e-5727dfcf630f
+		summarizeBy: sum
+		sourceColumn: Quarter Number
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: e07d9a4f-5e58-4b18-85be-56fec77f0403
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week of Year'
+		dataType: int64
+		formatString: 0
+		lineageTag: aadd7ec6-5939-4776-bd5d-34375c5d00e1
+		summarizeBy: sum
+		sourceColumn: Week of Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: e170eee2-97a0-448f-91d8-1d88fcfc8001
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		dataType: string
+		lineageTag: 920c65ac-afd1-404e-97d3-30ca1a8e583e
+		summarizeBy: none
+		sourceColumn: Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeekNum
+		dataType: int64
+		formatString: 0
+		lineageTag: e1092907-9e0e-4bb5-8682-b67cb1d306c2
+		summarizeBy: sum
+		sourceColumn: DayOfWeekNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Type'
+		dataType: string
+		lineageTag: dab9fad6-4a0d-4622-9853-b0fb98a2ad86
+		summarizeBy: none
+		sourceColumn: Day Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Calendar = m
+		mode: import
+		source =
+				let
+				    Origen = let
+				    // 1. Conexión a la tabla de hechos
+				    Source = global_ads_performance,
+				
+				    // 2. Definición de rangos dinámicos usando la columna [date]
+				    StartDate = Date.From( List.Min( Source[date] ) ),
+				    EndDate   = Date.From( List.Max( Source[date] ) ),
+				    TotalDays = Duration.Days( EndDate - StartDate ),
+				
+				    // 3. Generación de la lista de fechas
+				    DateList = List.Dates( StartDate, TotalDays + 1, #duration(1, 0, 0, 0) ),
+				
+				    // 4. Conversión a Tabla
+				    CalendarTable = Table.FromList(DateList, Splitter.SplitByNothing(), {"Date"}, null, ExtraValues.Error),
+				
+				    // 5. Columnas de Tiempo en Inglés
+				    AddYear         = Table.AddColumn(CalendarTable, "Year", each Date.Year([Date]), Int64.Type),
+				    AddMonthNum     = Table.AddColumn(AddYear, "Month Number", each Date.Month([Date]), Int64.Type),
+				    AddMonthName    = Table.AddColumn(AddMonthNum, "Month", each Text.Proper(Date.ToText([Date], "MMMM", "en-US")), Text.Type),
+				    AddMonthShort   = Table.AddColumn(AddMonthName, "Month Short", each Text.Proper(Date.ToText([Date], "MMM", "en-US")), Text.Type),
+				    AddYearMonth    = Table.AddColumn(AddMonthShort, "Year-Month", each Date.ToText([Date], "yyyy-MM"), Text.Type),
+				    AddQuarterNum   = Table.AddColumn(AddYearMonth, "Quarter Number", each Date.QuarterOfYear([Date]), Int64.Type),
+				    AddQuarter      = Table.AddColumn(AddQuarterNum, "Quarter", each "Q" & Text.From(Date.QuarterOfYear([Date])), Text.Type),
+				    AddWeek         = Table.AddColumn(AddQuarter, "Week of Year", each Date.WeekOfYear([Date]), Int64.Type),
+				    AddDayNum       = Table.AddColumn(AddWeek, "Day", each Date.Day([Date]), Int64.Type),
+				    AddDayName      = Table.AddColumn(AddDayNum, "Day Name", each Text.Proper(Date.ToText([Date], "dddd", "en-US")), Text.Type),
+				
+				    // 6. Análisis de Marketing (Weekend vs Weekday)
+				    AddDayOfWeekNum = Table.AddColumn(AddDayName, "DayOfWeekNum", each Date.DayOfWeek([Date], Day.Monday) + 1, Int64.Type),
+				    AddDayType      = Table.AddColumn(AddDayOfWeekNum, "Day Type", each if Date.DayOfWeek([Date], Day.Monday) >= 5 then "Weekend" else "Weekday", Text.Type)
+				
+				in
+				    AddDayType
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

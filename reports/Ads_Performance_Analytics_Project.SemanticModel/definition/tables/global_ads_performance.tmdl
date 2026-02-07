@@ -1,4 +1,4 @@
-table global_ads_performance_dataset
+table global_ads_performance
 	lineageTag: a8094e94-da0b-4497-a1cf-e867804e60a8
 
 	column date
@@ -136,15 +136,17 @@ table global_ads_performance_dataset
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition global_ads_performance_dataset = m
+	partition global_ads_performance = m
 		mode: import
 		source =
 				let
 				    Origen = Csv.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power--BI--global-ads-performance-analysis\data\global_ads_performance_dataset.csv"),[Delimiter=",", Columns=14, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"date", type date}, {"platform", type text}, {"campaign_type", type text}, {"industry", type text}, {"country", type text}, {"impressions", Int64.Type}, {"clicks", Int64.Type}, {"CTR", type number}, {"CPC", type number}, {"ad_spend", type number}, {"conversions", Int64.Type}, {"CPA", type number}, {"revenue", type number}, {"ROAS", type number}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"date", type date}, {"platform", type text}, {"campaign_type", type text}, {"industry", type text}, {"country", type text}, {"impressions", Int64.Type}, {"clicks", Int64.Type}, {"CTR", Percentage.Type}, {"CPC", type number}, {"ad_spend", type number}, {"conversions", Int64.Type}, {"CPA", type number}, {"revenue", type number}, {"ROAS", type number}})
 				in
 				    #"Tipo cambiado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

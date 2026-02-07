@@ -8,13 +8,15 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["global_ads_performance_dataset"]
+annotation PBI_QueryOrder = ["global_ads_performance","Dim_Calendar","Measures Table"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table global_ads_performance_dataset
+ref table global_ads_performance
 ref table DateTableTemplate_c14991f4-ae1e-4ae2-8152-e2225521037a
 ref table LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1
+ref table Dim_Calendar
+ref table 'Measures Table'
 
 ref cultureInfo es-ES
 

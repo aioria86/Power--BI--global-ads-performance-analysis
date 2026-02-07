@@ -1,5 +1,5 @@
 relationship 9de99fda-9122-4229-bd8f-f0f428eb8e28
 	joinOnDateBehavior: datePartOnly
-	fromColumn: global_ads_performance_dataset.date
+	fromColumn: global_ads_performance.date
 	toColumn: LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1.Date
 
