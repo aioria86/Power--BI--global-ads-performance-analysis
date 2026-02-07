@@ -1,22 +1,54 @@
 table 'Measures Table'
 	lineageTag: b35907f9-8c5f-4b29-b631-7e82b98330b9
 
-	column Columna1
-		dataType: string
-		lineageTag: 8a82301c-9dee-4d04-a0f4-044c74c9e967
-		summarizeBy: none
-		sourceColumn: Columna1
+	measure 'Total Spend' =
+			
+			SUM(
+			    global_ads_performance[ad_spend]
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: b0aada5f-710c-40f8-95f1-3b5806c33b33
 
-		annotation SummarizationSetBy = Automatic
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Total Revenue' =
+			
+			SUM(
+			    global_ads_performance[revenue]
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 3250d12c-7129-4dba-9f39-dde382445121
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Total Conversions' =
+			
+			SUM(
+			    global_ads_performance[conversions]
+			)
+		formatString: #,0
+		lineageTag: 76ac75cf-8609-4fd8-9410-2148b44c0315
+
+	measure 'Global ROAS' =
+			
+			DIVIDE(
+			    [Total Revenue],
+			    [Total Spend],
+			    0
+			)
+		lineageTag: 8f33bccd-a012-4e92-bc69-ffd06b72fbe8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'Measures Table' = m
 		mode: import
 		source =
 				let
 				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
 				in
-				    #"Tipo cambiado"
+				    #"Columnas quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 
