@@ -3,15 +3,13 @@ table global_ads_performance
 
 	column date
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 89237c57-2933-476e-a387-bcc2f807908e
 		summarizeBy: none
 		sourceColumn: date
 
-		variation Variación
-			isDefault
-			relationship: 9de99fda-9122-4229-bd8f-f0f428eb8e28
-			defaultHierarchy: LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1.'Jerarquía de fechas'
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -69,33 +67,30 @@ table global_ads_performance
 
 	column CTR
 		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: ef4d050f-7c3c-4fb7-8e91-73e478de15c6
 		summarizeBy: sum
 		sourceColumn: CTR
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column CPC
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 62c5c060-ef44-4164-a225-c4a65a20e502
 		summarizeBy: sum
 		sourceColumn: CPC
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ad_spend
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 1955c041-24bb-4640-97db-07eba2f50c67
 		summarizeBy: sum
 		sourceColumn: ad_spend
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column conversions
 		dataType: int64
@@ -108,33 +103,30 @@ table global_ads_performance
 
 	column CPA
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: c3d4f316-dc0e-4554-8da1-df8fc7868944
 		summarizeBy: sum
 		sourceColumn: CPA
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column revenue
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 17740063-74b2-482d-9df1-d0b13b90008a
 		summarizeBy: sum
 		sourceColumn: revenue
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ROAS
 		dataType: double
+		formatString: 0.00
 		lineageTag: 93c91180-eba7-4655-8d98-b48cca1acaac
 		summarizeBy: sum
 		sourceColumn: ROAS
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition global_ads_performance = m
 		mode: import

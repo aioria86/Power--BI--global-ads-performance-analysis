@@ -1,5 +1,4 @@
-relationship 9de99fda-9122-4229-bd8f-f0f428eb8e28
-	joinOnDateBehavior: datePartOnly
+relationship ec586a62-d073-8f1e-fc0f-f4299511eb8c
 	fromColumn: global_ads_performance.date
-	toColumn: LocalDateTable_a7542cf1-6482-4504-b762-25a541c211c1.Date
+	toColumn: Dim_Calendar.Date
 

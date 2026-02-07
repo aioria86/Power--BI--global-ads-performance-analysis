@@ -1,19 +1,24 @@
 table Dim_Calendar
 	lineageTag: f4d03961-1773-4e41-93af-be4ead0fc64b
+	dataCategory: Time
 
 	column Date
-		dataType: string
+		dataType: dateTime
+		isKey
+		formatString: Long Date
 		lineageTag: 55838958-f939-4a37-af44-44c2828fcea8
 		summarizeBy: none
 		sourceColumn: Date
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column Year
 		dataType: int64
 		formatString: 0
 		lineageTag: c466a09f-4809-4174-ba3a-c4d7218d89b2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year
 
 		annotation SummarizationSetBy = Automatic
@@ -22,7 +27,7 @@ table Dim_Calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: a9f0be4f-e260-4ecc-8b44-92d038b084ef
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Month Number
 
 		annotation SummarizationSetBy = Automatic
@@ -32,6 +37,9 @@ table Dim_Calendar
 		lineageTag: 79ca4875-d80e-4e35-ad41-783eb3ff9910
 		summarizeBy: none
 		sourceColumn: Month
+		sortByColumn: 'Month Number'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,7 +63,7 @@ table Dim_Calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: 5e17c111-37a0-400d-b14e-5727dfcf630f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Quarter Number
 
 		annotation SummarizationSetBy = Automatic
@@ -72,7 +80,7 @@ table Dim_Calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: aadd7ec6-5939-4776-bd5d-34375c5d00e1
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Week of Year
 
 		annotation SummarizationSetBy = Automatic
@@ -81,7 +89,7 @@ table Dim_Calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: e170eee2-97a0-448f-91d8-1d88fcfc8001
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Day
 
 		annotation SummarizationSetBy = Automatic
@@ -98,7 +106,7 @@ table Dim_Calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: e1092907-9e0e-4bb5-8682-b67cb1d306c2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: DayOfWeekNum
 
 		annotation SummarizationSetBy = Automatic
@@ -147,9 +155,10 @@ table Dim_Calendar
 				    AddDayType      = Table.AddColumn(AddDayOfWeekNum, "Day Type", each if Date.DayOfWeek([Date], Day.Monday) >= 5 then "Weekend" else "Weekday", Text.Type)
 				
 				in
-				    AddDayType
+				    AddDayType,
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Date", type date}})
 				in
-				    Origen
+				    #"Tipo cambiado"
 
 	annotation PBI_NavigationStepName = Navegación
 

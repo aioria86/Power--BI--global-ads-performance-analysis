@@ -10,10 +10,11 @@
       "nodes": [
         {
           "location": {
-            "x": 568,
-            "y": 0
+            "x": 307,
+            "y": 235
           },
           "nodeIndex": "global_ads_performance",
+          "nodeLineageTag": "a8094e94-da0b-4497-a1cf-e867804e60a8",
           "size": {
             "height": 300,
             "width": 234
@@ -28,15 +29,15 @@
           "nodeIndex": "Dim_Calendar",
           "nodeLineageTag": "f4d03961-1773-4e41-93af-be4ead0fc64b",
           "size": {
-            "height": 300,
+            "height": 213,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 284,
-            "y": 98
+            "x": 845,
+            "y": 61
           },
           "nodeIndex": "Measures Table",
           "nodeLineageTag": "b35907f9-8c5f-4b29-b631-7e82b98330b9",
