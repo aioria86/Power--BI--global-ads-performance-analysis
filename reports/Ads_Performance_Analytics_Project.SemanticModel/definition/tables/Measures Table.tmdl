@@ -36,9 +36,58 @@ table 'Measures Table'
 			    [Total Spend],
 			    0
 			)
+		formatString: 0.00
 		lineageTag: 8f33bccd-a012-4e92-bc69-ffd06b72fbe8
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure 'Total Clicks' =
+			
+			SUM(
+			    global_ads_performance[clicks]
+			)
+		formatString: 0
+		lineageTag: 64ae23cf-7158-4b7b-b47a-464234ddbf0a
+
+	measure 'Total Impressions' =
+			
+			SUM(
+			    global_ads_performance[impressions]
+			)
+		formatString: 0
+		lineageTag: 3f601538-0041-41e4-8cce-907ad0ffddde
+
+	measure 'Global CTR' =
+			
+			DIVIDE(
+			    [Total Clicks],
+			    [Total Impressions],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7e9c0dd9-710f-4f8d-908b-b066829f0068
+
+	measure 'Global CPA' =
+			
+			DIVIDE(
+			    [Total Spend],
+			    [Total Conversions],
+			    0
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 359d2a52-d1d1-4ab0-8951-421772a04605
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Global CPC' =
+			
+			DIVIDE(
+			    [Total Spend],
+			    [Total Clicks],
+			    0
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 60ce390f-1bd6-4fea-ba3f-cd757b646e36
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	partition 'Measures Table' = m
 		mode: import
