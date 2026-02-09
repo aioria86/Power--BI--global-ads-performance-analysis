@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 46,
         "y": 0
       },
       "nodes": [
@@ -43,6 +43,18 @@
           "nodeLineageTag": "b35907f9-8c5f-4b29-b631-7e82b98330b9",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1129,
+            "y": 167.5
+          },
+          "nodeIndex": "Tabla Periodos Dinamicos",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

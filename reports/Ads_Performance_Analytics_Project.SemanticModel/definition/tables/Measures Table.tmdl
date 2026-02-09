@@ -143,6 +143,26 @@ table 'Measures Table'
 		formatString: #,0
 		lineageTag: 49e3aab0-6bdc-4ead-98a6-aaf2c50d8188
 
+	measure 'Titulo de Ultima Fecha' =
+			
+			"Bienvenido, última actualización: " & FORMAT(MAX(global_ads_performance[date]), "dd/MM/yyyy")
+		lineageTag: c2972acb-97d4-402d-bce7-5a263c7c0086
+
+	measure 'Filtro Periodo Dinamico' =
+			
+			VAR DiasSeleccionados = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFecha = MAX(global_ads_performance[date])
+			VAR FechaInicio = UltimaFecha - DiasSeleccionados
+			
+			RETURN
+			IF(
+			    MAX('Dim_Calendar'[Date]) > FechaInicio && MAX('Dim_Calendar'[Date]) <= UltimaFecha,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 2f670433-b8a2-4ca6-92e9-b03b773f0c5e
+
 	partition 'Measures Table' = m
 		mode: import
 		source =

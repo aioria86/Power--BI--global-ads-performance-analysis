@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "ce61ee0d89929e516c52",
+  "position": {
+    "x": 10.210297316896302,
+    "y": 0,
+    "z": 0,
+    "height": 597.76649746192891,
+    "width": 908.71646120377079,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "global_ads_performance"
+                    }
+                  },
+                  "Property": "platform"
+                }
+              },
+              "queryRef": "global_ads_performance.platform",
+              "nativeQueryRef": "platform"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

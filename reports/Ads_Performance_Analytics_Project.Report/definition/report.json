@@ -50,6 +50,32 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "logo5081937306645575.png",
+          "path": "logo5081937306645575.png",
+          "type": "Image"
+        },
+        {
+          "name": "google9130440917281344.png",
+          "path": "google9130440917281344.png",
+          "type": "Image"
+        },
+        {
+          "name": "meta851976465699494.png",
+          "path": "meta851976465699494.png",
+          "type": "Image"
+        },
+        {
+          "name": "tik-tok9007414391924521.png",
+          "path": "tik-tok9007414391924521.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

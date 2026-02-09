@@ -15,6 +15,7 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table global_ads_performance
 ref table Dim_Calendar
 ref table 'Measures Table'
+ref table 'Tabla Periodos Dinamicos'
 
 ref cultureInfo es-ES
 

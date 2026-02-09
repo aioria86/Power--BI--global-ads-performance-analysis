@@ -1,0 +1,51 @@
+table 'Tabla Periodos Dinamicos'
+	lineageTag: 9f4d747c-e5a6-4942-b6a2-6365ab096416
+
+	column Periodo
+		lineageTag: bf846e14-d831-47e9-9177-0ff839872685
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orden
+		formatString: 0
+		lineageTag: b807dd5a-a2c7-4180-b1d8-6d2dda5fbec5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dias
+		formatString: 0
+		lineageTag: bfba2053-0303-4c0d-89b6-9d1898a438ab
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dias]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Periodos Dinamicos' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Periodo", STRING, 
+				    "Orden", INTEGER, 
+				    "Dias", INTEGER,
+				    {
+				        {"Todo", 0, 9999},
+				        {"Últimos 7 Días", 1, 7},
+				        {"Últimos 14 Días", 2, 14},
+				        {"Últimos 28 Días", 3, 28},
+				        {"Últimos 30 Días", 4, 30},
+				        {"Últimos 90 Días", 5, 90}
+				    }
+				)
+				```
+
+	annotation PBI_Id = 7f72474fb9ec4343b89ac2b0f3d56b65
+
