@@ -89,6 +89,60 @@ table 'Measures Table'
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
+	measure 'Total Profit' = [Total Revenue] - [Total Spend]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 4b163f27-1d07-405b-a62e-54b5fd740ba2
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Global ROI' =
+			
+			DIVIDE(
+			    [Total Profit],
+			    [Total Spend],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: bf84e3d5-3e65-47a9-b252-21c3a27145c4
+
+	measure AOV =
+			
+			DIVIDE(
+			    [Total Revenue],
+			    [Total Conversions],
+			    0
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 798f9183-4986-4fe7-9f48-71e570e10f3e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Global CPM' =
+			
+			DIVIDE(
+			    [Total Spend],
+			    [Total Impressions],
+			    0
+			) * 1000
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: cd0b1ff0-9d24-4bb6-abbe-10623bd67b54
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Conversion Rate (CVR)' =
+			
+			DIVIDE(
+			    [Total Conversions],
+			    [Total Clicks],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 732fde3c-66a6-499b-b122-cd485ab33789
+
+	measure 'Campaings Records' = COUNTROWS(global_ads_performance)
+		formatString: #,0
+		lineageTag: 49e3aab0-6bdc-4ead-98a6-aaf2c50d8188
+
 	partition 'Measures Table' = m
 		mode: import
 		source =
