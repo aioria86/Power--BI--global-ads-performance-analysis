@@ -67,7 +67,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Todo'"
+                                "Value": "'Últimos 90 Días'"
                               }
                             }
                           ]
@@ -195,5 +195,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c1539480000ac8227996",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabla Periodos Dinamicos"
+              }
+            },
+            "Property": "Periodo"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

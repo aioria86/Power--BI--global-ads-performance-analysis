@@ -3,8 +3,17 @@ table 'Measures Table'
 
 	measure 'Total Spend' =
 			
-			SUM(
-			    global_ads_performance[ad_spend]
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			
+			RETURN
+			IF(
+			    Dias == 9999,
+			    SUM(global_ads_performance[ad_spend]), // Muestra todo
+			    CALCULATE(
+			        SUM(global_ads_performance[ad_spend]),
+			        DATESINPERIOD('Dim_Calendar'[Date], UltimaFecha, -Dias, DAY)
+			    )
 			)
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: b0aada5f-710c-40f8-95f1-3b5806c33b33
@@ -49,8 +58,17 @@ table 'Measures Table'
 
 	measure 'Total Impressions' =
 			
-			SUM(
-			    global_ads_performance[impressions]
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			
+			RETURN
+			IF(
+			    Dias == 9999,
+			    SUM(global_ads_performance[impressions]),
+			    CALCULATE(
+			        SUM(global_ads_performance[impressions]),
+			        DATESINPERIOD('Dim_Calendar'[Date], UltimaFecha, -Dias, DAY)
+			    )
 			)
 		formatString: 0
 		lineageTag: 3f601538-0041-41e4-8cce-907ad0ffddde
@@ -151,17 +169,233 @@ table 'Measures Table'
 	measure 'Filtro Periodo Dinamico' =
 			
 			VAR DiasSeleccionados = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
-			VAR UltimaFecha = MAX(global_ads_performance[date])
+			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
 			VAR FechaInicio = UltimaFecha - DiasSeleccionados
+			
+			VAR FechaActual = MAX('Dim_Calendar'[Date])
 			
 			RETURN
 			IF(
-			    MAX('Dim_Calendar'[Date]) > FechaInicio && MAX('Dim_Calendar'[Date]) <= UltimaFecha,
+			    FechaActual > FechaInicio && FechaActual <= UltimaFecha,
 			    1,
 			    0
 			)
 		formatString: 0
 		lineageTag: 2f670433-b8a2-4ca6-92e9-b03b773f0c5e
+
+	measure 'Spend PM' = ```
+			
+			CALCULATE(
+			    [Total Spend], 
+			    DATEADD('Dim_Calendar'[Date], 
+			    -1, 
+			    MONTH
+			    )
+			)
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 6070b843-81ad-4ce0-9bd9-a424bf39881c
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Spend Var %' = ```
+			
+			DIVIDE(
+			    [Total Spend] - [Spend PM], 
+			    [Spend PM], 
+			    0
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 76103690-4747-4136-ae67-5bf6c52f4257
+
+	measure 'Spend Previous Period' = ```
+			
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30) // 30 por defecto
+			VAR MaxDate = MAX(global_ads_performance[date])
+			VAR CurrentPeriodStart = MaxDate - DaysSelected
+			
+			RETURN
+			CALCULATE(
+			    [Total Spend],
+			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
+			    REMOVEFILTERS('Dim_Calendar'),
+			    'Dim_Calendar'[Date] > (CurrentPeriodStart - DaysSelected) && 
+			    'Dim_Calendar'[Date] <= CurrentPeriodStart
+			)
+			```
+		lineageTag: 1c03dcb0-8543-4bd6-a257-ff585747ba62
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Spend Var % Dynamic' =
+			
+			DIVIDE([Total Spend] - [Spend Previous Period], [Spend Previous Period], 0)
+		lineageTag: 31d7a35d-2a2d-430b-90dc-c0995a73b8bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inversión Delta Text Dinamico' = ```
+			
+			VAR Delta = [Total Spend] - [Spend Previous Period]
+			VAR DeltaPct = [Spend Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			// Creamos un sufijo dinámico basado en la selección del usuario
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "al total",
+			        "per. ant." // Valor por defecto
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [Spend Previous Period] ) || [Spend Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    FORMAT ( Delta, "+$#,##0;-$#,##0" ) & " (" &
+			    FORMAT ( DeltaPct, "0.0%" ) &
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: d277d536-e1ea-4358-9a4d-d04d315a4895
+
+	measure 'Spend vs Impr Sparkline SVG' = ```
+			
+			
+			// 1. Configuración de Colores
+			
+			VAR LineColor = "#0288D1"
+			
+			VAR BarColor = "#B3E5FC"
+			
+			VAR PointColor = "#01579B"
+			
+			
+			// 2. Parámetros del Lienzo
+			
+			VAR Width = 150
+			
+			VAR Height = 50
+			
+			VAR Padding = 2
+			
+			
+			// 3. Captura de Periodo (Sincronizado con el segmentador)
+			
+			VAR DiasSeleccionados = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			
+			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			
+			VAR FechaInicio = IF(DiasSeleccionados = 9999, MIN(global_ads_performance[date]), UltimaFecha - DiasSeleccionados)
+			
+			
+			// 4. Crear la tabla de tendencia con VALORES DIARIOS
+			
+			VAR TrendTable =
+			
+			    FILTER(
+			
+			        SUMMARIZE(
+			
+			            ALL('Dim_Calendar'),
+			
+			            'Dim_Calendar'[Date],
+			
+			            "DailySpend", SUM(global_ads_performance[ad_spend]),
+			
+			            "DailyImpr", SUM(global_ads_performance[impressions])
+			
+			        ),
+			
+			        'Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFecha
+			
+			    )
+			
+			
+			// 5. Máximos para escalado (basado en la tabla de tendencia)
+			
+			VAR MaxSpend = MAXX(TrendTable, [DailySpend])
+			
+			VAR MaxImpr = MAXX(TrendTable, [DailyImpr])
+			
+			VAR XMinDate = MINX(TrendTable, [Date])
+			
+			VAR XMaxDate = MAXX(TrendTable, [Date])
+			
+			VAR DateCount = COUNTROWS(TrendTable)
+			
+			
+			// 6. Generar Coordenadas
+			
+			VAR SparklineTable =
+			
+			    ADDCOLUMNS(
+			
+			        TrendTable,
+			
+			        "X", INT( (Width - (Padding * 2)) * DIVIDE([Date] - XMinDate, XMaxDate - XMinDate) ) + Padding,
+			
+			        "Y_Line", INT( (Height - (Padding * 2)) * DIVIDE([DailySpend], MaxSpend) ),
+			
+			        "Y_Bar", INT( (Height - (Padding * 2)) * DIVIDE([DailyImpr], MaxImpr) )
+			
+			    )
+			
+			
+			// 7. Renderizado de Barras (Impresiones)
+			
+			VAR BarWidth = DIVIDE(Width, DateCount) * 0.8
+			
+			VAR Bars =
+			
+			    CONCATENATEX(
+			
+			        SparklineTable,
+			
+			        "<rect x='" & [X] - (BarWidth/2) & "' y='" & Height - [Y_Bar] & "' width='" & BarWidth & "' height='" & [Y_Bar] & "' fill='" & BarColor & "' />"
+			
+			    )
+			
+			
+			// 8. Renderizado de Línea (Gasto)
+			
+			VAR LinePoints = CONCATENATEX(SparklineTable, [X] & "," & Height - [Y_Line], " ", [Date])
+			
+			
+			// 9. Punto Final
+			
+			VAR LastX = MAXX(FILTER(SparklineTable, [Date] = XMaxDate), [X])
+			
+			VAR LastY = Height - MAXX(FILTER(SparklineTable, [Date] = XMaxDate), [Y_Line])
+			
+			
+			// 10. SVG Final
+			
+			VAR SVG =
+			
+			    "data:image/svg+xml;utf8," &
+			
+			    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 " & Width & " " & Height & "'>" &
+			
+			        Bars &
+			
+			        "<polyline fill='none' stroke='" & LineColor & "' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' points='" & LinePoints & "' />" &
+			
+			        "<circle cx='" & LastX & "' cy='" & LastY & "' r='2' fill='" & PointColor & "' />" &
+			
+			    "</svg>"
+			
+			
+			RETURN SVG 
+			```
+		lineageTag: 68374cda-61a3-45c3-a495-8dcc7736ab37
+		dataCategory: ImageUrl
 
 	partition 'Measures Table' = m
 		mode: import
