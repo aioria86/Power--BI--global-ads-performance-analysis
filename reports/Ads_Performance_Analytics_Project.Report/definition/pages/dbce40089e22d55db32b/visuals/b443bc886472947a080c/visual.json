@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "edcdfa329ccaba32c82e",
+  "name": "b443bc886472947a080c",
   "position": {
     "x": 0,
     "y": 0,
@@ -23,12 +23,11 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Spend"
+                  "Property": "Global CTR"
                 }
               },
-              "queryRef": "Measures Table.Total Spend",
-              "nativeQueryRef": "Gasto Total",
-              "displayName": "Gasto Total"
+              "queryRef": "Measures Table.Global CTR",
+              "nativeQueryRef": "Global CTR"
             }
           ]
         }
@@ -43,7 +42,7 @@
                     "Entity": "Measures Table"
                   }
                 },
-                "Property": "Total Spend"
+                "Property": "Global CTR"
               }
             },
             "direction": "Descending"
@@ -93,7 +92,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3E5FC'"
+                      "Value": "'#E1BEE7'"
                     }
                   }
                 }
@@ -164,7 +163,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3E5FC'"
+                      "Value": "'#E1BEE7'"
                     }
                   }
                 }
@@ -195,34 +194,6 @@
       "referenceLabel": [
         {
           "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measures Table"
-                    }
-                  },
-                  "Property": "Spend Delta Text Dynamic"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "Measures Table.Total Spend",
-            "id": "field-e64f917a-92a7-bfdf-5db1-bec05f9e5b1b",
-            "order": 0
-          }
-        },
-        {
-          "properties": {
             "paddingUniform": {
               "expr": {
                 "Literal": {
@@ -247,7 +218,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "Spend Var % Dynamic"
+                                  "Property": "CTR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -276,7 +247,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "Spend Var % Dynamic"
+                                      "Property": "CTR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -296,7 +267,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "Spend Var % Dynamic"
+                                      "Property": "CTR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -325,7 +296,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "Spend Var % Dynamic"
+                                  "Property": "CTR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -351,162 +322,18 @@
           "selector": {
             "id": "default"
           }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Measures Table.Total Spend"
-          }
-        }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Measures Table.Total Spend"
-          }
         },
         {
           "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Measures Table"
-                                    }
-                                  },
-                                  "Property": "Spend Var % Dynamic"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#999999'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "And": {
-                              "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measures Table"
-                                        }
-                                      },
-                                      "Property": "Spend Var % Dynamic"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "-9999D"
-                                    }
-                                  }
-                                }
-                              },
-                              "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Measures Table"
-                                        }
-                                      },
-                                      "Property": "Spend Var % Dynamic"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "0D"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#EA4335'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 1,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Measures Table"
-                                    }
-                                  },
-                                  "Property": "Spend Var % Dynamic"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "0D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#34A853'"
-                            }
-                          }
-                        }
-                      ]
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measures Table"
                     }
-                  }
+                  },
+                  "Property": "CTR Delta Text Dynamic"
                 }
               }
             }
@@ -519,7 +346,9 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Total Spend"
+            "metadata": "Measures Table.Global CTR",
+            "id": "field-37e8dcf4-2464-cb26-1368-bbd609cd2549",
+            "order": 0
           }
         }
       ],
@@ -545,7 +374,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0288D1'"
+                      "Value": "'#7B1FA2'"
                     }
                   }
                 }
@@ -611,6 +440,169 @@
             "id": "default"
           }
         }
+      ],
+      "referenceLabelTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measures Table.Global CTR"
+          }
+        }
+      ],
+      "referenceLabelValue": [
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measures Table.Global CTR"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measures Table"
+                                    }
+                                  },
+                                  "Property": "CTR Var % Dynamic"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#999999'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 1,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Measures Table"
+                                    }
+                                  },
+                                  "Property": "CTR Var % Dynamic"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#34A853'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "And": {
+                              "Left": {
+                                "Comparison": {
+                                  "ComparisonKind": 1,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "Measures Table"
+                                        }
+                                      },
+                                      "Property": "CTR Var % Dynamic"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "-9999D"
+                                    }
+                                  }
+                                }
+                              },
+                              "Right": {
+                                "Comparison": {
+                                  "ComparisonKind": 3,
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "Measures Table"
+                                        }
+                                      },
+                                      "Property": "CTR Var % Dynamic"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0D"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#EA4335'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Measures Table.Global CTR"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -656,7 +648,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1F5FE'"
+                      "Value": "'#E1BEE7'"
                     }
                   }
                 }
@@ -668,5 +660,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "8e076a87a069fede15eb"
+  "parentGroupName": "b38aca91c54205d57e7d"
 }

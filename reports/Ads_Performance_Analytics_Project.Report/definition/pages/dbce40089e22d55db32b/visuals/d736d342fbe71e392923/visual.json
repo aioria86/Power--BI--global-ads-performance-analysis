@@ -4,10 +4,10 @@
   "position": {
     "x": 923.28358208955217,
     "y": 103.88059701492537,
-    "z": 2008,
+    "z": 10000,
     "height": 80.597014925373131,
     "width": 356.41791044776119,
-    "tabOrder": 12
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -67,7 +67,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Últimos 14 Días'"
+                                "Value": "'Últimos 7 Días'"
                               }
                             }
                           ]
@@ -195,23 +195,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c1539480000ac8227996",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Tabla Periodos Dinamicos"
-              }
-            },
-            "Property": "Periodo"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

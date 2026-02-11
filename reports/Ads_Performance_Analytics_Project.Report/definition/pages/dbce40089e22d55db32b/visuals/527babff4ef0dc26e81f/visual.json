@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "c3c87b45811adc974afa",
+  "name": "527babff4ef0dc26e81f",
   "position": {
     "x": 196.35311143270624,
     "y": 0.14169384625355974,
@@ -42,11 +42,11 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Impressions"
+                  "Property": "Total Conversions"
                 }
               },
-              "queryRef": "Measures Table.Total Impressions",
-              "nativeQueryRef": "Total Impressions"
+              "queryRef": "Measures Table.Total Conversions",
+              "nativeQueryRef": "Total Conversions"
             }
           ]
         },
@@ -60,11 +60,11 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Spend"
+                  "Property": "Total Clicks"
                 }
               },
-              "queryRef": "Measures Table.Total Spend",
-              "nativeQueryRef": "Total Spend"
+              "queryRef": "Measures Table.Total Clicks",
+              "nativeQueryRef": "Total Clicks"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3E5FC'"
+                      "Value": "'#FFE0B2'"
                     }
                   }
                 }
@@ -205,5 +205,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "8e076a87a069fede15eb"
+  "parentGroupName": "14ede7008f7eee5963c1"
 }

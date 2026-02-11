@@ -40,11 +40,31 @@ table 'Measures Table'
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
-	measure 'Total Conversions' =
+	measure 'Total Conversions' = ```
 			
-			SUM(
-			    global_ads_performance[conversions]
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Detectamos el punto en el eje X del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
+			
+			RETURN
+			IF(
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        SUM(global_ads_performance[conversions]),
+			        BLANK() 
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total del periodo)
+			    CALCULATE(
+			        SUM(global_ads_performance[conversions]),
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			    )
 			)
+			```
 		formatString: #,0
 		lineageTag: 76ac75cf-8609-4fd8-9410-2148b44c0315
 
@@ -58,12 +78,33 @@ table 'Measures Table'
 		formatString: 0.00
 		lineageTag: 8f33bccd-a012-4e92-bc69-ffd06b72fbe8
 
-	measure 'Total Clicks' =
+	measure 'Total Clicks' = ```
 			
-			SUM(
-			    global_ads_performance[clicks]
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Capturamos la fecha de la fila/punto actual del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
+			
+			RETURN
+			IF(
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    // Si el día está en el rango, sumamos; si no, BLANK para que el eje X se contraiga
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        SUM(global_ads_performance[clicks]),
+			        BLANK() 
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total acumulado del periodo)
+			    CALCULATE(
+			        SUM(global_ads_performance[clicks]),
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			    )
 			)
-		formatString: 0
+			```
+		formatString: #,0
 		lineageTag: 64ae23cf-7158-4b7b-b47a-464234ddbf0a
 
 	measure 'Total Impressions' =
@@ -90,15 +131,35 @@ table 'Measures Table'
 			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
 			    )
 			)
-		formatString: 0
+		formatString: #,0
 		lineageTag: 3f601538-0041-41e4-8cce-907ad0ffddde
 
 	measure 'Global CTR' =
 			
-			DIVIDE(
-			    [Total Clicks],
-			    [Total Impressions],
-			    0
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Capturamos la fecha de la fila/punto actual del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
+			
+			// Definimos el cálculo base del CTR
+			VAR CTR_Base = DIVIDE(SUM(global_ads_performance[clicks]), SUM(global_ads_performance[impressions]), 0)
+			
+			RETURN
+			IF(
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        CTR_Base,
+			        BLANK() // Limpia el gráfico fuera del periodo
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total acumulado del periodo)
+			    CALCULATE(
+			        CTR_Base,
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 7e9c0dd9-710f-4f8d-908b-b066829f0068
@@ -417,6 +478,171 @@ table 'Measures Table'
 			```
 		lineageTag: 68374cda-61a3-45c3-a495-8dcc7736ab37
 		dataCategory: ImageUrl
+
+	measure 'Impressions Previous Period' = ```
+			
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30)
+			// Sincronizamos con la misma fecha máxima global
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR CurrentPeriodStart = UltimaFechaGlobal - DaysSelected
+			
+			RETURN
+			CALCULATE(
+			    SUM(global_ads_performance[impressions]), // Suma directa para bypass de lógica de gráfico
+			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
+			    REMOVEFILTERS('Dim_Calendar'),
+			    'Dim_Calendar'[Date] > (CurrentPeriodStart - DaysSelected) && 
+			    'Dim_Calendar'[Date] <= CurrentPeriodStart
+			)
+			```
+		formatString: 0
+		lineageTag: eb40dd09-fa67-4610-96fc-9ee9ed68bf3c
+
+	measure 'Impressions Var % Dynamic' =
+			
+			DIVIDE([Total Impressions] - [Impressions Previous Period], [Impressions Previous Period], 0)
+		lineageTag: 3dfccf89-3dbb-43db-b95e-38bc278257d1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Impressions Delta Text Dynamic' = ```
+			
+			VAR Delta = [Total Impressions] - [Impressions Previous Period]
+			VAR DeltaPct = [Impressions Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			// Creamos un sufijo dinámico basado en la selección del usuario
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "total",
+			        "per. ant." // Valor por defecto
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [Impressions Previous Period] ) || [Impressions Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    FORMAT ( Delta, "+#,##0;-#,##0" ) & " (" & 
+			    FORMAT ( DeltaPct, "0.0%" ) & 
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: f379e95d-a4db-4fad-9449-68b8dd86a97c
+
+	measure 'Clicks Previous Period' = ```
+			
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30)
+			// Sincronizamos con la misma fecha máxima global
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR CurrentPeriodStart = UltimaFechaGlobal - DaysSelected
+			
+			RETURN
+			CALCULATE(
+			    SUM(global_ads_performance[clicks]), // Suma directa para bypass de lógica de gráfico
+			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
+			    REMOVEFILTERS('Dim_Calendar'),
+			    'Dim_Calendar'[Date] > (CurrentPeriodStart - DaysSelected) && 
+			    'Dim_Calendar'[Date] <= CurrentPeriodStart
+			)
+			```
+		formatString: 0
+		lineageTag: 6468c3e7-039c-4820-a52d-dafccb97fb77
+
+	measure 'Clicks Var % Dynamic' =
+			
+			DIVIDE([Total Clicks] - [Clicks Previous Period], [Clicks Previous Period], 0)
+		lineageTag: 56500af2-f45b-4023-a220-570cf555637b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Clicks Delta Text Dynamic' = ```
+			
+			VAR Delta = [Total Clicks]- [Clicks Previous Period]
+			VAR DeltaPct = [Clicks Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			// Creamos un sufijo dinámico basado en la selección del usuario
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "total",
+			        "per. ant." // Valor por defecto
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [Clicks Previous Period] ) || [Clicks Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    FORMAT ( Delta, "+#,##0;-#,##0" ) & " (" & 
+			    FORMAT ( DeltaPct, "0.0%" ) & 
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: cc047b27-398c-4977-8593-4137ffca2172
+
+	measure 'CTR Previous Period' = ```
+			
+			DIVIDE(
+			    [Clicks Previous Period], 
+			    [Impressions Previous Period], 
+			    0
+			)
+			```
+		lineageTag: 7af473a2-9ca9-4323-a3e9-596425b68528
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CTR Var % Dynamic' = ```
+			
+			DIVIDE(
+			    [Global CTR] - [CTR Previous Period], 
+			    [CTR Previous Period], 
+			    0
+			)
+			```
+		lineageTag: a5c1605f-88db-4000-b64a-e888958d4ef7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CTR Delta Text Dynamic' = ```
+			
+			VAR Delta = [Global CTR] - [CTR Previous Period]
+			VAR DeltaPct = [CTR Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "total",
+			        "per. ant."
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [CTR Previous Period] ) || [CTR Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    FORMAT ( Delta, "+0.00%;-0.00%" ) & " (" & 
+			    FORMAT ( DeltaPct, "0.0%" ) & 
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: c6643fab-a139-49e8-897c-9ab1ba96e9e3
 
 	partition 'Measures Table' = m
 		mode: import

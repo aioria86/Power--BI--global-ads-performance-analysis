@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "c3c87b45811adc974afa",
+  "name": "537e7eb5efe25643f76c",
   "position": {
     "x": 196.35311143270624,
     "y": 0.14169384625355974,
@@ -60,11 +60,11 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Spend"
+                  "Property": "Global CTR"
                 }
               },
-              "queryRef": "Measures Table.Total Spend",
-              "nativeQueryRef": "Total Spend"
+              "queryRef": "Measures Table.Global CTR",
+              "nativeQueryRef": "Global CTR"
             }
           ]
         }
@@ -193,7 +193,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#B3E5FC'"
+                      "Value": "'#E1BEE7'"
                     }
                   }
                 }
@@ -205,5 +205,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "8e076a87a069fede15eb"
+  "parentGroupName": "b38aca91c54205d57e7d"
 }

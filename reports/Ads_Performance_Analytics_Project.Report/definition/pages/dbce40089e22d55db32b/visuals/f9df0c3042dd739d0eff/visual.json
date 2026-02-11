@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 104.77611940298507,
-    "z": 2003,
+    "z": 5000,
     "height": 79.701492537313428,
     "width": 196.11940298507463,
-    "tabOrder": 7
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -156,23 +156,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a75bf262482124c458c9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "global_ads_performance"
-              }
-            },
-            "Property": "campaign_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
