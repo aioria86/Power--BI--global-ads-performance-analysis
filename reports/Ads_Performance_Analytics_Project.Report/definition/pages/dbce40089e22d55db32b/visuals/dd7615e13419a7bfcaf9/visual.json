@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "dd7615e13419a7bfcaf9",
+  "position": {
+    "x": 81.66172106824925,
+    "y": 7.5964391691394653,
+    "z": 4000,
+    "height": 63.620178041543021,
+    "width": 622.90801186943611,
+    "tabOrder": 10001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Informe de Rendimiento Global",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "¿Cómo está impactando nuestra inversión en el crecimiento del negocio?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Light",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "016a77c0e980f02642a9"
+}

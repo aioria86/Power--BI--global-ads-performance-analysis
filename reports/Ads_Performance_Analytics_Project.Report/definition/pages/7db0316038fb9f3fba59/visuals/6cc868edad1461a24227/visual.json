@@ -1,0 +1,49 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "6cc868edad1461a24227",
+  "position": {
+    "x": 81.66172106824925,
+    "y": 7.5964391691394653,
+    "z": 4000,
+    "height": 63.620178041543021,
+    "width": 622.90801186943611,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Análisis de Canales y Dispositivos",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "¿Dónde y en qué dispositivos estamos captando el tráfico más rentable?",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI Light",
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "4ab840a3a2fc37fb7333"
+}

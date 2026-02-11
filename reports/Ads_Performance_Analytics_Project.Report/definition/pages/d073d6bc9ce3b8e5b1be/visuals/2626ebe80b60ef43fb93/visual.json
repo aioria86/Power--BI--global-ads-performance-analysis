@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2626ebe80b60ef43fb93",
+  "position": {
+    "x": 1063.8805970149253,
+    "y": 16.119402985074625,
+    "z": 2000,
+    "height": 41.194029850746269,
+    "width": 210.44776119402985,
+    "tabOrder": 15000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Logos Redes",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "d1e845de65f809458ec4"
+}
