@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "418fa6e2daada0f3ca29",
+  "name": "c68bf71fb3b62aed058f",
   "position": {
-    "x": 606.26865671641792,
+    "x": 403.88059701492534,
     "y": 27.761194029850742,
-    "z": 4000,
+    "z": 2000,
     "height": 79.701492537313428,
     "width": 196.11940298507463,
-    "tabOrder": 8000
+    "tabOrder": 9
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "global_ads_performance"
                     }
                   },
-                  "Property": "country"
+                  "Property": "industry"
                 }
               },
-              "queryRef": "global_ads_performance.country",
-              "nativeQueryRef": "country",
+              "queryRef": "global_ads_performance.industry",
+              "nativeQueryRef": "industry",
               "active": true
             }
           ]
@@ -86,7 +86,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Pais'"
+                  "Value": "'Industria'"
                 }
               }
             }
@@ -112,13 +112,6 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
-                }
-              }
-            },
-            "underline": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -157,5 +150,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e49505e96f6256c3c47c"
+  "parentGroupName": "28e9e14b024ea4203928"
 }

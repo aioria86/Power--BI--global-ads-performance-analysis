@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "14ede7008f7eee5963c1",
+  "name": "e49505e96f6256c3c47c",
   "position": {
     "x": 0,
-    "y": 461.49253731343276,
-    "z": 4000,
-    "height": 124.4776119402985,
-    "width": 344.77611940298505,
-    "tabOrder": 13000
+    "y": 77.014925373134332,
+    "z": 7000,
+    "height": 107.46268656716418,
+    "width": 802.38805970149258,
+    "tabOrder": 10002
   },
   "visualGroup": {
-    "displayName": "Grupo KPI Clicks",
+    "displayName": "Grupo Filtros  Menu",
     "groupMode": "ScaleMode"
   }
 }

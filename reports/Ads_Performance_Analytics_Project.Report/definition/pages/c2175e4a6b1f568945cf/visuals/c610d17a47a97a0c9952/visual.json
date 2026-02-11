@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "418fa6e2daada0f3ca29",
+  "name": "c610d17a47a97a0c9952",
   "position": {
-    "x": 606.26865671641792,
+    "x": 0,
     "y": 27.761194029850742,
-    "z": 4000,
+    "z": 0,
     "height": 79.701492537313428,
     "width": 196.11940298507463,
-    "tabOrder": 8000
+    "tabOrder": 7
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "global_ads_performance"
                     }
                   },
-                  "Property": "country"
+                  "Property": "campaign_type"
                 }
               },
-              "queryRef": "global_ads_performance.country",
-              "nativeQueryRef": "country",
+              "queryRef": "global_ads_performance.campaign_type",
+              "nativeQueryRef": "campaign_type",
               "active": true
             }
           ]
@@ -62,6 +62,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -86,7 +93,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Pais'"
+                  "Value": "'Tipo de Campaña'"
                 }
               }
             }
@@ -112,13 +119,6 @@
               "expr": {
                 "Literal": {
                   "Value": "9D"
-                }
-              }
-            },
-            "underline": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -157,5 +157,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "e49505e96f6256c3c47c"
+  "parentGroupName": "c84a035e2c59854e0cf8"
 }
