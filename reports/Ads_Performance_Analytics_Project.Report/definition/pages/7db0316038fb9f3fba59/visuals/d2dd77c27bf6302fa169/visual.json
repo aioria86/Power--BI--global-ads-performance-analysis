@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "d2dd77c27bf6302fa169",
+  "position": {
+    "x": 0,
+    "y": 595.52238805970137,
+    "z": 5,
+    "height": 124.4776119402985,
+    "width": 343.88059701492534,
+    "tabOrder": 14000
+  },
+  "visualGroup": {
+    "displayName": "Grupo KPI CTR",
+    "groupMode": "ScaleMode"
+  }
+}

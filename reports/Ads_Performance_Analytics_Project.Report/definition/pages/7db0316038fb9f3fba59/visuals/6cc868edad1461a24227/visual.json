@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Análisis de Canales y Dispositivos",
+                    "value": "Análisis de Canales y Segmentos",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "16pt"
@@ -30,7 +30,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "¿Dónde y en qué dispositivos estamos captando el tráfico más rentable?",
+                    "value": "¿Qué plataformas e industrias generan el tráfico más rentable?",
                     "textStyle": {
                       "fontFamily": "Segoe UI Light",
                       "fontSize": "11pt"
