@@ -2,8 +2,6034 @@ cultureInfo es-ES
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "global_ads_performance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global ads performance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "global ad performance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "global_ads_performance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ads performance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ad performance": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        },
+			        {
+			          "global ad presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "global ad recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "global ad enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "ad presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ad recital": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ad enactment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "global ad act": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "global ad routine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "global ad concert": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "global ad show": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "date": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "global_ads_performance.platform": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "platform"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "platform": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "podium": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dais": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "policy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "proposal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "manifesto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "program": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.campaign_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "campaign_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaign type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campaign_type": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "campaign category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "campaign genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "campaign manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "campaign variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "campaign brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "campaign class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.industry": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "industry"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "industry": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "commerce": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "production": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "manufacturing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "engineering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diligence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "productiveness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "conscientiousness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "activity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.impression": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "impressions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "impression": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "depression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "imprint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "impress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hollow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dimple": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "dent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.click": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "clicks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "click": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "tick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "snap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "clunk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.ctr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "CTR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ctr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.cpc": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "CPC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cpc": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.ad_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "ad_spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ad spend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ad_spend": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "advertisement spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "poster spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "flier spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "flyer spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "announcement spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "billboard spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "commercial spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "trailer spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "advert spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hoarding spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.conversion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "conversions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conversion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "renovation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "transfiguration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "exchange": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "changeover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "switch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.cpa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "CPA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cpa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "global_ads_performance.roa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "global_ads_performance",
+			          "ConceptualProperty": "ROAS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "roa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Calendar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Month Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.month_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Month Short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month short": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mth short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "petite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "squat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "quick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "rapid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "fleeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.yearmonth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Year-Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year-month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "year-mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "year mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr -month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "yr month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.quarter_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Quarter Number"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "qtr number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.667
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.week_of_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Week of Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week of year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "week of yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.day_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Day Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.day_of_week_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "DayOfWeekNum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day of week num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DayOfWeekNum": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "day of week number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.day_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Day Type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "type": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "day category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "day variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "genre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "manner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "day brand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "day class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "measures table": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "measure table": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "measure tabletop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "measure bench": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure counter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure slab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure desk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure stall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure table top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "measure spreadsheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_spend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Spend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total spend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "overall spend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Gasto Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "aggregate revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_conversions": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Conversions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total conversions": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conversions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total renovation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total transfiguration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_ROAS": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global ROAS"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global ROAS": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ROAS": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_clicks": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Clicks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total clicks": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clicks": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate click": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall click": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_impressions": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Impressions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total impressions": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "impressions": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate impression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall impression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total impersonation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "impersonation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total imitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total parody": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "imitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "parody": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "total depression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "depression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_CTR": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global CTR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global CTR": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_CPA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global CPA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global CPA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_CPC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global CPC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global CPC": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.total_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Total Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "profit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_ROI": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global ROI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global ROI": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ROI": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.aov": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "AOV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aov": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.global_CPM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Global CPM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "global CPM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CPM": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.conversion_rate_CVR": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Conversion Rate (CVR)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conversion rate (CVR)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conversion rate": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.campaings_records": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Campaings Records"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campaings records": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campaing annals": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "campaing history": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "campaing archive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaing chronicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaing account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaing register": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "campaing minute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "campaing proceeding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "campaing report": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "campaing file": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.titulo_de_ultima_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Titulo de Ultima Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulo de ultima fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.filtro_periodo_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Filtro Periodo Dinamico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtro periodo dinamico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_PM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend PM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend PM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_var_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend Var %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend var %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend var percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "spend var pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_previous_period": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend Previous Period"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend previous period": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend previous era": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "spend previous epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "spend previous age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "spend previous stage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "spend previous phase": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "spend previous episode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "spend previous interlude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "spend previous interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "spend previous extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_var__dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend Var % Dynamic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend var % dynamic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend var percentage dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "spend var pct dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_delta_text_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend Delta Text Dynamic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend delta text dynamic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "spend estuary text dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend outlet text dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend delta manuscript dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend delta transcript dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend delta typescript dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend delta edition dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend delta version dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "spend mouth text dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "spend channel text dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "spend delta writing dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.spend_vs_impr_sparkline_SVG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "Spend vs Impr Sparkline SVG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend vs impr sparkline SVG": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Periodos Dinamicos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla periodos dinamico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tabla periodo dinamico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico.periodo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Periodos Dinamicos",
+			          "ConceptualProperty": "Periodo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "periodo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico.orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Periodos Dinamicos",
+			          "ConceptualProperty": "Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico.dias": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Periodos Dinamicos",
+			          "ConceptualProperty": "Dias"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dias": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "global_ads_performance_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.cpc": {
+			          "Target": {
+			            "Entity": "global_ads_performance.cpc"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "global_ads_performance.cpc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cpc_indicates_how_expensive_global_ads_performances_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.cpc"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_cpc"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_is_expensive1": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.ad_spend": {
+			          "Target": {
+			            "Entity": "global_ads_performance.ad_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "global_ads_performance.ad_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ad_spend_indicates_how_expensive_global_ads_performances_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.ad_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ad_spend"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_is_expensive2": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.cpa": {
+			          "Target": {
+			            "Entity": "global_ads_performance.cpa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "global_ads_performance.cpa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cpa_indicates_how_expensive_global_ads_performances_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.cpa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_cpas"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_is_expensive3": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.revenue": {
+			          "Target": {
+			            "Entity": "global_ads_performance.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "global_ads_performance.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "revenue_indicates_how_expensive_global_ads_performances_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_revenues"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.country": {
+			          "Target": {
+			            "Entity": "global_ads_performance.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "global_ads_performance.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "global_ads_performance.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_are_in_countries"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_platform": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.platform": {
+			          "Target": {
+			            "Entity": "global_ads_performance.platform"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.platform"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_platforms"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_campaign_type": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.campaign_type": {
+			          "Target": {
+			            "Entity": "global_ads_performance.campaign_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.campaign_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_campaign_types"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_industry": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.industry": {
+			          "Target": {
+			            "Entity": "global_ads_performance.industry"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.industry"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_industries"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.country": {
+			          "Target": {
+			            "Entity": "global_ads_performance.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_countries"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_impression": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.impression": {
+			          "Target": {
+			            "Entity": "global_ads_performance.impression"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.impression"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_impressions"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_click": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.click": {
+			          "Target": {
+			            "Entity": "global_ads_performance.click"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.click"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_clicks"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_ctr": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.ctr": {
+			          "Target": {
+			            "Entity": "global_ads_performance.ctr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.ctr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ctrs"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_conversion": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.conversion": {
+			          "Target": {
+			            "Entity": "global_ads_performance.conversion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.conversion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_conversions"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_roa": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "global_ads_performance.roa": {
+			          "Target": {
+			            "Entity": "global_ads_performance.roa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance.roa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_roas"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.date": {
+			          "Target": {
+			            "Entity": "dim_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.year": {
+			          "Target": {
+			            "Entity": "dim_calendar.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_years"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_month_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.month_number": {
+			          "Target": {
+			            "Entity": "dim_calendar.month_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.month_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_month_numbers"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.month": {
+			          "Target": {
+			            "Entity": "dim_calendar.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_months"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_month_short": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.month_short": {
+			          "Target": {
+			            "Entity": "dim_calendar.month_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.month_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_month_shorts"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_yearmonth": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.yearmonth": {
+			          "Target": {
+			            "Entity": "dim_calendar.yearmonth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.yearmonth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_yearmonths"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_quarter_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.quarter_number": {
+			          "Target": {
+			            "Entity": "dim_calendar.quarter_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.quarter_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_quarter_numbers"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.quarter": {
+			          "Target": {
+			            "Entity": "dim_calendar.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_quarters"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_week_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.week_of_year": {
+			          "Target": {
+			            "Entity": "dim_calendar.week_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.week_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_week_of_year"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.day": {
+			          "Target": {
+			            "Entity": "dim_calendar.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_days"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_day_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.day_name": {
+			          "Target": {
+			            "Entity": "dim_calendar.day_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.day_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_day_names"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_day_of_week_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.day_of_week_num": {
+			          "Target": {
+			            "Entity": "dim_calendar.day_of_week_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.day_of_week_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_day_of_week_num"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_day_type": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.day_type": {
+			          "Target": {
+			            "Entity": "dim_calendar.day_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.day_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_day_types"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_total_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.total_spend": {
+			          "Target": {
+			            "Entity": "measures_table.total_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_total_spend"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_total_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.total_spend": {
+			          "Target": {
+			            "Entity": "measures_table.total_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_total_spend"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_spend": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_spend": {
+			          "Target": {
+			            "Entity": "measures_table.total_spend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_spend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_spend"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_revenue": {
+			          "Target": {
+			            "Entity": "measures_table.total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_revenue"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_conversions": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_conversions": {
+			          "Target": {
+			            "Entity": "measures_table.total_conversions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_conversions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_conversions"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_ROAS": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_ROAS": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROAS"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROAS"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_ROAS"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_ROAS": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_ROAS": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROAS"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROAS"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_ROAS"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_ROAS": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_ROAS": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROAS"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROAS"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_ROAS"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_clicks": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_clicks": {
+			          "Target": {
+			            "Entity": "measures_table.total_clicks"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_clicks"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_clicks"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_total_impressions": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.total_impressions": {
+			          "Target": {
+			            "Entity": "measures_table.total_impressions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_impressions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_total_impressions"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_total_impressions": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.total_impressions": {
+			          "Target": {
+			            "Entity": "measures_table.total_impressions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_impressions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_total_impressions"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_impressions": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_impressions": {
+			          "Target": {
+			            "Entity": "measures_table.total_impressions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_impressions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_impressions"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_CTR": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_CTR": {
+			          "Target": {
+			            "Entity": "measures_table.global_CTR"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CTR"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_CTR"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_CTR": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_CTR": {
+			          "Target": {
+			            "Entity": "measures_table.global_CTR"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CTR"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_CTR"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_CTR": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_CTR": {
+			          "Target": {
+			            "Entity": "measures_table.global_CTR"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CTR"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_CTR"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_CPA": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_CPA": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_CPA"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_CPA": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_CPA": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_CPA"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_CPA": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_CPA": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_CPA"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_CPC": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_CPC": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_CPC"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_CPC": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_CPC": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_CPC"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_CPC": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_CPC": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_CPC"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.total_profit": {
+			          "Target": {
+			            "Entity": "measures_table.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_total_profit"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.total_profit": {
+			          "Target": {
+			            "Entity": "measures_table.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_total_profit"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.total_profit": {
+			          "Target": {
+			            "Entity": "measures_table.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_total_profit"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_ROI": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_ROI": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_ROI"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_ROI": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_ROI": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_ROI"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_ROI": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_ROI": {
+			          "Target": {
+			            "Entity": "measures_table.global_ROI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_ROI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_ROI"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_aov": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.aov": {
+			          "Target": {
+			            "Entity": "measures_table.aov"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.aov"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_aov"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_global_CPM": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.global_CPM": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_CPM"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_global_CPM": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.global_CPM": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_global_CPM"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_global_CPM": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.global_CPM": {
+			          "Target": {
+			            "Entity": "measures_table.global_CPM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.global_CPM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_global_CPM"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_conversion_rate_CVR": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.conversion_rate_CVR": {
+			          "Target": {
+			            "Entity": "measures_table.conversion_rate_CVR"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.conversion_rate_CVR"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_conversion_rate_CVR"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_campaings_records": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.campaings_records": {
+			          "Target": {
+			            "Entity": "measures_table.campaings_records"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.campaings_records"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_campaings_records"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_titulo_de_ultima_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.titulo_de_ultima_fecha": {
+			          "Target": {
+			            "Entity": "measures_table.titulo_de_ultima_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.titulo_de_ultima_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_titulo_de_ultima_fecha"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_filtro_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.filtro_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "measures_table.filtro_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.filtro_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_filtro_periodo_dinamico"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_filtro_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.filtro_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "measures_table.filtro_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.filtro_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_filtro_periodo_dinamico"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_filtro_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.filtro_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "measures_table.filtro_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.filtro_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_filtro_periodo_dinamico"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_spend_PM": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.spend_PM": {
+			          "Target": {
+			            "Entity": "measures_table.spend_PM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_PM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_spend_PM"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_spend_PM": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.spend_PM": {
+			          "Target": {
+			            "Entity": "measures_table.spend_PM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_PM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_spend_PM"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_PM": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_PM": {
+			          "Target": {
+			            "Entity": "measures_table.spend_PM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_PM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_PM"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_spend_var_": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.spend_var_": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_spend_var_"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_spend_var_": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.spend_var_": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_spend_var_"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_var_": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_var_": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_var_"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_previous_period": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_previous_period": {
+			          "Target": {
+			            "Entity": "measures_table.spend_previous_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_previous_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_previous_period"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_spend_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.spend_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_spend_var__dynamic"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_spend_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.spend_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_spend_var__dynamic"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_var__dynamic"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_spend_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.spend_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_spend_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_spend_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.spend_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_spend_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.spend_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "measures_table_has_spend_vs_impr_sparkline_SVG": {
+			      "Binding": {
+			        "ConceptualEntity": "Measures Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measures_table": {
+			          "Target": {
+			            "Entity": "measures_table"
+			          }
+			        },
+			        "measures_table.spend_vs_impr_sparkline_SVG": {
+			          "Target": {
+			            "Entity": "measures_table.spend_vs_impr_sparkline_SVG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measures_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_vs_impr_sparkline_SVG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measures_tables_have_spend_vs_impr_sparkline_SVG"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_periodo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "tabla_periodos_dinamico.periodo": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico.periodo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "tabla_periodos_dinamico.periodo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_periodos"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "tabla_periodos_dinamico.orden": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico.orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "tabla_periodos_dinamico.orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_ordens"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_dias": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "tabla_periodos_dinamico.dias": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico.dias"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "tabla_periodos_dinamico.dias"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_dias"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_dim_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_dim_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "global_ads_performance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_global_ads_performances"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 

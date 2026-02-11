@@ -4,15 +4,25 @@ table 'Measures Table'
 	measure 'Total Spend' =
 			
 			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
-			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Capturamos la fecha de la fila/punto actual del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
 			
 			RETURN
 			IF(
-			    Dias == 9999,
-			    SUM(global_ads_performance[ad_spend]), // Muestra todo
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        SUM(global_ads_performance[ad_spend]),
+			        BLANK() // Esto limpia el eje X para los días que no quieres ver
+			    ),
+			    // LÓGICA PARA LA TARJETA O TOTALES
 			    CALCULATE(
 			        SUM(global_ads_performance[ad_spend]),
-			        DATESINPERIOD('Dim_Calendar'[Date], UltimaFecha, -Dias, DAY)
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
 			    )
 			)
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
@@ -59,15 +69,25 @@ table 'Measures Table'
 	measure 'Total Impressions' =
 			
 			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
-			VAR UltimaFecha = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Esta variable detecta si la fecha de la fila actual del gráfico está en el rango
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
 			
 			RETURN
 			IF(
-			    Dias == 9999,
-			    SUM(global_ads_performance[impressions]),
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        SUM(global_ads_performance[impressions]),
+			        BLANK() // Al devolver BLANK, Power BI quita el día del gráfico
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total acumulado)
 			    CALCULATE(
 			        SUM(global_ads_performance[impressions]),
-			        DATESINPERIOD('Dim_Calendar'[Date], UltimaFecha, -Dias, DAY)
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
 			    )
 			)
 		formatString: 0
@@ -211,13 +231,14 @@ table 'Measures Table'
 
 	measure 'Spend Previous Period' = ```
 			
-			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30) // 30 por defecto
-			VAR MaxDate = MAX(global_ads_performance[date])
-			VAR CurrentPeriodStart = MaxDate - DaysSelected
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30)
+			// Usamos la misma lógica de fecha máxima global que en Total Spend
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR CurrentPeriodStart = UltimaFechaGlobal - DaysSelected
 			
 			RETURN
 			CALCULATE(
-			    [Total Spend],
+			    SUM(global_ads_performance[ad_spend]), // Suma directa para evitar el BLANK() del ISFILTERED
 			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
 			    REMOVEFILTERS('Dim_Calendar'),
 			    'Dim_Calendar'[Date] > (CurrentPeriodStart - DaysSelected) && 
@@ -235,7 +256,7 @@ table 'Measures Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Inversión Delta Text Dinamico' = ```
+	measure 'Spend Delta Text Dynamic' = ```
 			
 			VAR Delta = [Total Spend] - [Spend Previous Period]
 			VAR DeltaPct = [Spend Var % Dynamic]
