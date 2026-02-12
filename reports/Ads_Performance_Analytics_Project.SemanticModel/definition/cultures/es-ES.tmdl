@@ -287,6 +287,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.452
 			          }
+			        },
+			        {
+			          "Plataforma / Campaña": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2040,6 +2050,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Inversión": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2109,16 +2129,6 @@ cultureInfo es-ES
 			        },
 			        {
 			          "Ingreso Total": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Revenue": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2484,6 +2494,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Impr.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2510,6 +2530,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "% CTR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2529,6 +2559,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "CPA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "CPA ($)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2694,6 +2734,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Ganancia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2715,6 +2765,16 @@ cultureInfo es-ES
 			          "ROI": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "% ROI": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5952,6 +6012,39 @@ cultureInfo es-ES
 			    }
 			  },
 			  "Relationships": {
+			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.ROI_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ROI_var__dynamic"
+			        }
+			      ]
+			    },
 			    "tabla_periodos_dinamico_has_measures_table_ROI_var__dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabla Periodos Dinamicos"
@@ -11758,39 +11851,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "parámetro_x_industrias_have_parámetro_x_industrias"
-			        }
-			      ]
-			    },
-			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.ROI_var__dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_var__dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_var__dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_ROI_var__dynamic"
 			        }
 			      ]
 			    },

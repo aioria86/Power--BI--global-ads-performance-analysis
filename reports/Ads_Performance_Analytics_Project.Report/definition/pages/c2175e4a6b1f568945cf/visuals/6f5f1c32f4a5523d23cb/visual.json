@@ -43,12 +43,12 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Revenue"
+                  "Property": "Global CTR"
                 }
               },
-              "queryRef": "Measures Table.Total Revenue",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue"
+              "queryRef": "Measures Table.Global CTR",
+              "nativeQueryRef": "CTR",
+              "displayName": "CTR"
             }
           ],
           "fieldParameters": [
@@ -79,7 +79,7 @@
                     "Entity": "Measures Table"
                   }
                 },
-                "Property": "Total Revenue"
+                "Property": "Global CTR"
               }
             },
             "direction": "Descending"

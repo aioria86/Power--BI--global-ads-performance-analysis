@@ -75,7 +75,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''Measures Table''[Total Revenue]'"
+                                "Value": "'''Measures Table''[Global CTR]'"
                               }
                             }
                           ]
@@ -103,7 +103,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''Measures Table''[Total Revenue]'"
+                                      "Value": "'''Measures Table''[Global CTR]'"
                                     }
                                   }
                                 ]
@@ -127,7 +127,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Revenue"
+                            "0": "CTR"
                           }
                         ]
                       }
