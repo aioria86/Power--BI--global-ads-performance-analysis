@@ -2208,6 +2208,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.491
 			          }
+			        },
+			        {
+			          "Conversiones": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2275,6 +2285,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "Clics Totales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Clics": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2407,6 +2427,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "Impresiones Totales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Impresiones": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5740,9 +5770,403 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "measures_table.ROI_delta_text_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "ROI Delta Text Dynamic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ROI delta text dynamic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dynamic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "text dynamic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "delta text dynamic": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "active": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "go-ahead": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "self-motivated": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.ROI_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ROI_var__dynamic"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_ROI_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.ROI_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_ROI_var__dynamic"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_ROI_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.ROI_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_ROI_var__dynamic"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_ROI_previous_period": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.ROI_previous_period": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_previous_period"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_previous_period"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ROI_previous_period"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_profit_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.profit_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_profit_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_profit_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.profit_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_profit_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_profit_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.profit_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_profit_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_profit_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.profit_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_profit_var__dynamic"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_profit_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.profit_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_profit_var__dynamic"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_profit_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.profit_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.profit_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.profit_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_profit_var__dynamic"
+			        }
+			      ]
+			    },
 			    "global_ads_performance_has_measures_table_profit_previous_period": {
 			      "Binding": {
 			        "ConceptualEntity": "global_ads_performance"
@@ -11209,7 +11633,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "dim_calendar_has_measures_table_profit_var__dynamic": {
+			    "dim_calendar_has_measures_table_ROI_delta_text_dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Calendar"
 			      },
@@ -11220,9 +11644,9 @@ cultureInfo es-ES
 			            "Entity": "dim_calendar"
 			          }
 			        },
-			        "measures_table.profit_var__dynamic": {
+			        "measures_table.ROI_delta_text_dynamic": {
 			          "Target": {
-			            "Entity": "measures_table.profit_var__dynamic"
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
 			          }
 			        }
 			      },
@@ -11233,16 +11657,16 @@ cultureInfo es-ES
 			              "Role": "dim_calendar"
 			            },
 			            "Object": {
-			              "Role": "measures_table.profit_var__dynamic"
+			              "Role": "measures_table.ROI_delta_text_dynamic"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_profit_var__dynamic"
+			          "ID": "dim_calendars_have_ROI_delta_text_dynamic"
 			        }
 			      ]
 			    },
-			    "tabla_periodos_dinamico_has_measures_table_profit_var__dynamic": {
+			    "tabla_periodos_dinamico_has_measures_table_ROI_delta_text_dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabla Periodos Dinamicos"
 			      },
@@ -11253,9 +11677,9 @@ cultureInfo es-ES
 			            "Entity": "tabla_periodos_dinamico"
 			          }
 			        },
-			        "measures_table.profit_var__dynamic": {
+			        "measures_table.ROI_delta_text_dynamic": {
 			          "Target": {
-			            "Entity": "measures_table.profit_var__dynamic"
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
 			          }
 			        }
 			      },
@@ -11266,16 +11690,16 @@ cultureInfo es-ES
 			              "Role": "tabla_periodos_dinamico"
 			            },
 			            "Object": {
-			              "Role": "measures_table.profit_var__dynamic"
+			              "Role": "measures_table.ROI_delta_text_dynamic"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tabla_periodos_dinamicos_have_profit_var__dynamic"
+			          "ID": "tabla_periodos_dinamicos_have_ROI_delta_text_dynamic"
 			        }
 			      ]
 			    },
-			    "global_ads_performance_has_measures_table_profit_var__dynamic": {
+			    "global_ads_performance_has_measures_table_ROI_delta_text_dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "global_ads_performance"
 			      },
@@ -11286,9 +11710,9 @@ cultureInfo es-ES
 			            "Entity": "global_ads_performance"
 			          }
 			        },
-			        "measures_table.profit_var__dynamic": {
+			        "measures_table.ROI_delta_text_dynamic": {
 			          "Target": {
-			            "Entity": "measures_table.profit_var__dynamic"
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
 			          }
 			        }
 			      },
@@ -11299,243 +11723,12 @@ cultureInfo es-ES
 			              "Role": "global_ads_performance"
 			            },
 			            "Object": {
-			              "Role": "measures_table.profit_var__dynamic"
+			              "Role": "measures_table.ROI_delta_text_dynamic"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_profit_var__dynamic"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_measures_table_profit_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "measures_table.profit_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.profit_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "measures_table.profit_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_profit_delta_text_dynamic"
-			        }
-			      ]
-			    },
-			    "tabla_periodos_dinamico_has_measures_table_profit_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabla Periodos Dinamicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabla_periodos_dinamico": {
-			          "Target": {
-			            "Entity": "tabla_periodos_dinamico"
-			          }
-			        },
-			        "measures_table.profit_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.profit_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabla_periodos_dinamico"
-			            },
-			            "Object": {
-			              "Role": "measures_table.profit_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabla_periodos_dinamicos_have_profit_delta_text_dynamic"
-			        }
-			      ]
-			    },
-			    "global_ads_performance_has_measures_table_profit_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.profit_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.profit_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.profit_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_profit_delta_text_dynamic"
-			        }
-			      ]
-			    },
-			    "global_ads_performance_has_measures_table_ROI_previous_period": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.ROI_previous_period": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_previous_period"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_previous_period"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_ROI_previous_period"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_measures_table_ROI_var__dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "measures_table.ROI_var__dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_var__dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_var__dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_ROI_var__dynamic"
-			        }
-			      ]
-			    },
-			    "tabla_periodos_dinamico_has_measures_table_ROI_var__dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabla Periodos Dinamicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabla_periodos_dinamico": {
-			          "Target": {
-			            "Entity": "tabla_periodos_dinamico"
-			          }
-			        },
-			        "measures_table.ROI_var__dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_var__dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabla_periodos_dinamico"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_var__dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabla_periodos_dinamicos_have_ROI_var__dynamic"
-			        }
-			      ]
-			    },
-			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.ROI_var__dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_var__dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_var__dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_ROI_var__dynamic"
+			          "ID": "global_ads_performances_have_ROI_delta_text_dynamic"
 			        }
 			      ]
 			    },
