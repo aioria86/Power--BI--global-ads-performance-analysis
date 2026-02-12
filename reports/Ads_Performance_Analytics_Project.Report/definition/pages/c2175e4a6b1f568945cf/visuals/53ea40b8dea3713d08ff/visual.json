@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b443bc886472947a080c",
+  "name": "53ea40b8dea3713d08ff",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 124.4776119402985,
     "width": 196.11940298507463,
-    "tabOrder": 0
+    "tabOrder": 13
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,11 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Global CTR"
+                  "Property": "AOV"
                 }
               },
-              "queryRef": "Measures Table.Global CTR",
-              "nativeQueryRef": "CTR",
-              "displayName": "CTR"
+              "queryRef": "Measures Table.AOV",
+              "nativeQueryRef": "AOV"
             }
           ]
         }
@@ -43,7 +42,7 @@
                     "Entity": "Measures Table"
                   }
                 },
-                "Property": "Global CTR"
+                "Property": "AOV"
               }
             },
             "direction": "Descending"
@@ -93,7 +92,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C5CAE9'"
                     }
                   }
                 }
@@ -164,7 +163,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C5CAE9'"
                     }
                   }
                 }
@@ -219,7 +218,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "AOV Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -248,7 +247,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "AOV Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -268,7 +267,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "AOV Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -297,7 +296,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "AOV Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -334,7 +333,7 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "CTR Delta Text Dynamic"
+                  "Property": "AOV Delta Text Dynamic"
                 }
               }
             }
@@ -347,8 +346,8 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR",
-            "id": "field-37e8dcf4-2464-cb26-1368-bbd609cd2549",
+            "metadata": "Measures Table.AOV",
+            "id": "field-7557ffcf-6694-c037-5409-7165458560e7",
             "order": 0
           }
         }
@@ -375,7 +374,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7B1FA2'"
+                      "Value": "'#3949AB'"
                     }
                   }
                 }
@@ -454,7 +453,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.AOV"
           }
         }
       ],
@@ -470,7 +469,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.AOV"
           }
         },
         {
@@ -492,7 +491,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "AOV Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -519,7 +518,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "AOV Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -540,7 +539,7 @@
                             "And": {
                               "Left": {
                                 "Comparison": {
-                                  "ComparisonKind": 1,
+                                  "ComparisonKind": 2,
                                   "Left": {
                                     "Measure": {
                                       "Expression": {
@@ -548,7 +547,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "AOV Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -568,7 +567,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "AOV Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -601,7 +600,7 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.AOV"
           }
         }
       ]
@@ -649,7 +648,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C5CAE9'"
                     }
                   }
                 }
@@ -661,5 +660,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b38aca91c54205d57e7d"
+  "parentGroupName": "600ff88b8fcb939464c2"
 }

@@ -305,13 +305,39 @@ table 'Measures Table'
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: bf84e3d5-3e65-47a9-b252-21c3a27145c4
 
-	measure AOV =
+	measure AOV = ```
 			
-			DIVIDE(
-			    [Total Revenue],
-			    [Total Conversions],
-			    0
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Capturamos la fecha de la fila/punto actual del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
+			
+			// Definimos el cálculo base del AOV (Revenue / Conversions)
+			VAR AOV_Base = 
+			    DIVIDE(
+			        SUM(global_ads_performance[revenue]), 
+			        SUM(global_ads_performance[conversions]), 
+			        0
+			    )
+			
+			RETURN
+			IF(
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        AOV_Base,
+			        BLANK() // Limpia el gráfico fuera del rango seleccionado
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total del periodo)
+			    CALCULATE(
+			        AOV_Base,
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			    )
 			)
+			```
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: 798f9183-4986-4fe7-9f48-71e570e10f3e
 
@@ -355,13 +381,39 @@ table 'Measures Table'
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
-	measure 'Conversion Rate (CVR)' =
+	measure 'Conversion Rate (CVR)' = ```
 			
-			DIVIDE(
-			    [Total Conversions],
-			    [Total Clicks],
-			    0
+			VAR Dias = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 9999)
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR FechaInicio = IF(Dias == 9999, MIN('Dim_Calendar'[Date]), UltimaFechaGlobal - Dias)
+			
+			// Capturamos la fecha de la fila/punto actual del gráfico
+			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
+			
+			// Definimos el cálculo base del CVR (Conversions / Clicks)
+			VAR CVR_Base = 
+			    DIVIDE(
+			        SUM(global_ads_performance[conversions]), 
+			        SUM(global_ads_performance[clicks]), 
+			        0
+			    )
+			
+			RETURN
+			IF(
+			    ISFILTERED('Dim_Calendar'[Date]),
+			    // LÓGICA PARA EL GRÁFICO (Eje X)
+			    IF(
+			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
+			        CVR_Base,
+			        BLANK() // Limpia el gráfico fuera del rango seleccionado
+			    ),
+			    // LÓGICA PARA LA TARJETA (Total del periodo)
+			    CALCULATE(
+			        CVR_Base,
+			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			    )
 			)
+			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 732fde3c-66a6-499b-b122-cd485ab33789
 
@@ -1034,6 +1086,137 @@ table 'Measures Table'
 			)
 			```
 		lineageTag: 6a91057d-a7fe-4908-b059-c7ad7b27610c
+
+	measure 'CVR Previous Period' = ```
+			
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30)
+			// Sincronizamos con la misma fecha máxima global
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR CurrentPeriodStart = UltimaFechaGlobal - DaysSelected
+			
+			// Definimos el rango del periodo anterior
+			VAR StartDatePrev = CurrentPeriodStart - DaysSelected
+			VAR EndDatePrev = CurrentPeriodStart
+			
+			RETURN
+			CALCULATE(
+			    DIVIDE(
+			        SUM(global_ads_performance[conversions]), 
+			        SUM(global_ads_performance[clicks]), 
+			        0
+			    ),
+			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
+			    REMOVEFILTERS('Dim_Calendar'),
+			    'Dim_Calendar'[Date] > StartDatePrev && 
+			    'Dim_Calendar'[Date] <= EndDatePrev
+			)
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5c225eb3-30ff-4029-a6b2-d6cdcad5832e
+
+	measure 'CVR Var % Dynamic' =
+			
+			DIVIDE([Conversion Rate (CVR)]- [CVR Previous Period], [CVR Previous Period], 0)
+		lineageTag: b1fa1bfb-e6c0-4963-9cdf-cfd8b983728e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'CVR Delta Text Dynamic' = ```
+			
+			VAR Delta = [Conversion Rate (CVR)] - [CVR Previous Period]
+			VAR DeltaPct = [CVR Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			// Creamos un sufijo dinámico basado en la selección del usuario
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "total",
+			        "per. ant." // Valor por defecto
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [CVR Previous Period] ) || [CVR Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    // Usamos +0.00% porque el CVR se mide en puntos porcentuales
+			    FORMAT ( Delta, "+0.00%;-0.00%" ) & " (" & 
+			    FORMAT ( DeltaPct, "0.0%" ) & 
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: db54b3a1-582a-4ef3-a16c-dcfb828a8952
+
+	measure 'AOV Previous Period' = ```
+			
+			VAR DaysSelected = SELECTEDVALUE('Tabla Periodos Dinamicos'[Dias], 30)
+			// Sincronizamos con la misma fecha máxima global
+			VAR UltimaFechaGlobal = CALCULATE(MAX(global_ads_performance[date]), ALL(global_ads_performance))
+			VAR CurrentPeriodStart = UltimaFechaGlobal - DaysSelected
+			
+			// Definimos el rango del periodo anterior con precisión
+			VAR StartDatePrev = CurrentPeriodStart - DaysSelected
+			VAR EndDatePrev = CurrentPeriodStart
+			
+			RETURN
+			CALCULATE(
+			    DIVIDE(
+			        SUM(global_ads_performance[revenue]), 
+			        SUM(global_ads_performance[conversions]), 
+			        0
+			    ),
+			    REMOVEFILTERS('Tabla Periodos Dinamicos'),
+			    REMOVEFILTERS('Dim_Calendar'),
+			    'Dim_Calendar'[Date] > StartDatePrev && 
+			    'Dim_Calendar'[Date] <= EndDatePrev
+			)
+			```
+		lineageTag: 84cc0197-61dd-4db4-b7ed-9f06a5cddff3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AOV Var % Dynamic' =
+			
+			DIVIDE([AOV] - [AOV Previous Period], [AOV Previous Period], 0)
+		lineageTag: 74e2fe06-724c-4d3a-b0b6-37077e5d2ed7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AOV Delta Text Dynamic' = ```
+			
+			VAR Delta = [AOV] - [AOV Previous Period]
+			VAR DeltaPct = [AOV Var % Dynamic]
+			VAR PeriodoSeleccionado = SELECTEDVALUE('Tabla Periodos Dinamicos'[Periodo], "Periodo")
+			
+			// Creamos un sufijo dinámico basado en la selección del usuario
+			VAR SufijoDinamico = 
+			    SWITCH(
+			        PeriodoSeleccionado,
+			        "Últimos 7 Días", "7d ant.",
+			        "Últimos 14 Días", "14d ant.",
+			        "Últimos 28 Días", "28d ant.",
+			        "Últimos 30 Días", "30d ant.",
+			        "Últimos 90 Días", "90d ant.",
+			        "Todo", "total",
+			        "per. ant." // Valor por defecto
+			    )
+			
+			RETURN
+			IF (
+			    ISBLANK ( [AOV Previous Period] ) || [AOV Previous Period] = 0 || PeriodoSeleccionado = "Todo",
+			    "Dataset completo",
+			    // Para AOV usamos formato de moneda con 2 decimales en el Delta
+			    FORMAT ( Delta, "+$#,##0.00;-$#,##0.00" ) & " (" & 
+			    FORMAT ( DeltaPct, "0.0%" ) & 
+			    IF ( Delta >= 0, " ↑", " ↓" ) & ") vs " & SufijoDinamico
+			)
+			```
+		lineageTag: 09f04b6d-582b-4d14-9b6d-c33897426296
 
 	partition 'Measures Table' = m
 		mode: import

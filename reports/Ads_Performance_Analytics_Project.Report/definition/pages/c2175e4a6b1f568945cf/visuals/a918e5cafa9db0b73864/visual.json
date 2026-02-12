@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b443bc886472947a080c",
+  "name": "a918e5cafa9db0b73864",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 124.4776119402985,
     "width": 196.11940298507463,
-    "tabOrder": 0
+    "tabOrder": 16
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Global CTR"
+                  "Property": "Total Clicks"
                 }
               },
-              "queryRef": "Measures Table.Global CTR",
-              "nativeQueryRef": "CTR",
-              "displayName": "CTR"
+              "queryRef": "Measures Table.Total Clicks",
+              "nativeQueryRef": "Clics Totales",
+              "displayName": "Clics Totales"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Measures Table"
                   }
                 },
-                "Property": "Global CTR"
+                "Property": "Total Clicks"
               }
             },
             "direction": "Descending"
@@ -93,7 +93,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#FFE0B2'"
                     }
                   }
                 }
@@ -164,7 +164,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#FFE0B2'"
                     }
                   }
                 }
@@ -219,7 +219,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "Clicks Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -248,7 +248,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "Clicks Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -268,7 +268,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "Clicks Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -297,7 +297,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "Clicks Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -334,7 +334,7 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "CTR Delta Text Dynamic"
+                  "Property": "Clicks Delta Text Dynamic"
                 }
               }
             }
@@ -347,8 +347,8 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR",
-            "id": "field-37e8dcf4-2464-cb26-1368-bbd609cd2549",
+            "metadata": "Measures Table.Total Clicks",
+            "id": "field-7fce260f-33ba-b51d-59e8-9b122530ee65",
             "order": 0
           }
         }
@@ -375,7 +375,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7B1FA2'"
+                      "Value": "'#EF6C00'"
                     }
                   }
                 }
@@ -454,7 +454,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Total Clicks"
           }
         }
       ],
@@ -470,7 +470,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Total Clicks"
           }
         },
         {
@@ -492,7 +492,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "Clicks Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -519,7 +519,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "Clicks Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -548,7 +548,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "Clicks Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -568,7 +568,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "Clicks Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -601,7 +601,7 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Total Clicks"
           }
         }
       ]
@@ -649,7 +649,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#FFE0B2'"
                     }
                   }
                 }
@@ -661,5 +661,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b38aca91c54205d57e7d"
+  "parentGroupName": "1c6a3cae21a5a37b8d03"
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "b443bc886472947a080c",
+  "name": "a894a39863b9bda8eb15",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 124.4776119402985,
     "width": 196.11940298507463,
-    "tabOrder": 0
+    "tabOrder": 12
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Global CTR"
+                  "Property": "Conversion Rate (CVR)"
                 }
               },
-              "queryRef": "Measures Table.Global CTR",
-              "nativeQueryRef": "CTR",
-              "displayName": "CTR"
+              "queryRef": "Measures Table.Conversion Rate (CVR)",
+              "nativeQueryRef": "CVR",
+              "displayName": "CVR"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Measures Table"
                   }
                 },
-                "Property": "Global CTR"
+                "Property": "Conversion Rate (CVR)"
               }
             },
             "direction": "Descending"
@@ -93,7 +93,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C8E6C9'"
                     }
                   }
                 }
@@ -164,7 +164,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C8E6C9'"
                     }
                   }
                 }
@@ -219,7 +219,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "CVR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -248,7 +248,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "CVR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -268,7 +268,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "CVR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -297,7 +297,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "CVR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -334,7 +334,7 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "CTR Delta Text Dynamic"
+                  "Property": "CVR Delta Text Dynamic"
                 }
               }
             }
@@ -347,8 +347,8 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR",
-            "id": "field-37e8dcf4-2464-cb26-1368-bbd609cd2549",
+            "metadata": "Measures Table.Conversion Rate (CVR)",
+            "id": "field-5b340b33-6462-9298-4638-3429340a54d5",
             "order": 0
           }
         }
@@ -375,7 +375,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#7B1FA2'"
+                      "Value": "'#43A047'"
                     }
                   }
                 }
@@ -454,7 +454,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Conversion Rate (CVR)"
           }
         }
       ],
@@ -470,7 +470,7 @@
             }
           },
           "selector": {
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Conversion Rate (CVR)"
           }
         },
         {
@@ -492,7 +492,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "CVR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -519,7 +519,7 @@
                                       "Entity": "Measures Table"
                                     }
                                   },
-                                  "Property": "CTR Var % Dynamic"
+                                  "Property": "CVR Var % Dynamic"
                                 }
                               },
                               "Right": {
@@ -540,7 +540,7 @@
                             "And": {
                               "Left": {
                                 "Comparison": {
-                                  "ComparisonKind": 1,
+                                  "ComparisonKind": 2,
                                   "Left": {
                                     "Measure": {
                                       "Expression": {
@@ -548,7 +548,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "CVR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -568,7 +568,7 @@
                                           "Entity": "Measures Table"
                                         }
                                       },
-                                      "Property": "CTR Var % Dynamic"
+                                      "Property": "CVR Var % Dynamic"
                                     }
                                   },
                                   "Right": {
@@ -601,7 +601,7 @@
                 }
               }
             ],
-            "metadata": "Measures Table.Global CTR"
+            "metadata": "Measures Table.Conversion Rate (CVR)"
           }
         }
       ]
@@ -649,7 +649,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E1BEE7'"
+                      "Value": "'#C8E6C9'"
                     }
                   }
                 }
@@ -661,5 +661,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "b38aca91c54205d57e7d"
+  "parentGroupName": "3942a80c7ab3b7a147fe"
 }

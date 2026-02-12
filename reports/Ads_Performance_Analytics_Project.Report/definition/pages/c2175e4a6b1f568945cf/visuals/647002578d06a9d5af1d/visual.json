@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Informe de Rendimiento Global",
+                    "value": "Eficiencia de Campañas y Mensajes",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "16pt"
@@ -30,7 +30,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "¿Qué tipo de publicaciones y mensajes generan mayor engagement y conversión?",
+                    "value": "¿Qué tipos de campañas están captando mejor la atención del usuario?",
                     "textStyle": {
                       "fontFamily": "Segoe UI Light",
                       "fontSize": "11pt"
