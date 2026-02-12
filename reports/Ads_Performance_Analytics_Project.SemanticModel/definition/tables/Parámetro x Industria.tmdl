@@ -1,0 +1,50 @@
+table 'Parámetro x Industria'
+	lineageTag: 7a465357-dc1e-416e-b27f-8209b23e1576
+
+	column 'Parámetro x Industria'
+		lineageTag: 7d9b6c80-dad8-4ab9-87c4-bcf4eede1681
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parámetro x Industria Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Parámetro x Industria Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro x Industria Campos'
+		isHidden
+		lineageTag: da5636e9-e3b4-4d41-a770-dcb0975ee9bd
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parámetro x Industria Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parámetro x Industria Orden'
+		isHidden
+		formatString: 0
+		lineageTag: a0928e97-73c0-4b90-ae29-50e129207100
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parámetro x Industria' = calculated
+		mode: import
+		source =
+				{
+				    ("Revenue", NAMEOF('Measures Table'[Total Revenue]), 0),
+				    ("Clicks", NAMEOF('Measures Table'[Total Clicks]), 1),
+				    ("CTR", NAMEOF('Measures Table'[Global CTR]), 2),
+				    ("CVR", NAMEOF('Measures Table'[Conversion Rate (CVR)]), 3)
+				}
+
+	annotation PBI_Id = 06480aaaa6dd445cbd5b31e131f348bd
+

@@ -416,6 +416,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.727
 			          }
+			        },
+			        {
+			          "Tipo de Campaña:": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -531,6 +541,16 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Industria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1252,6 +1272,16 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Fecha": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -2079,6 +2109,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "Ingreso Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Revenue": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5834,42 +5874,84 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.ROI_var__dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_var__dynamic"
-			          }
+			    },
+			    "parámetro_x_industria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Parámetro x Industria"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_var__dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_ROI_var__dynamic"
+			          "parámetro x industria": {
+			            "State": "Generated"
+			          }
 			        }
 			      ]
 			    },
+			    "parámetro_x_industria.parámetro_x_industria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Parámetro x Industria",
+			          "ConceptualProperty": "Parámetro x Industria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "parámetro x industria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "parámetro x industria name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "parámetro_x_industria.parámetro_x_industria_campos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Parámetro x Industria",
+			          "ConceptualProperty": "Parámetro x Industria Campos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "parámetro x industria campos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "parámetro_x_industria.parámetro_x_industria_orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Parámetro x Industria",
+			          "ConceptualProperty": "Parámetro x Industria Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "parámetro x industria orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "tabla_periodos_dinamico_has_measures_table_ROI_var__dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabla Periodos Dinamicos"
@@ -11630,6 +11712,85 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "global_ads_performances_are_in_countries"
+			        }
+			      ]
+			    },
+			    "parámetro_x_industria_is_named_parámetro_x_industria": {
+			      "Binding": {
+			        "ConceptualEntity": "Parámetro x Industria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "parámetro_x_industria": {
+			          "Target": {
+			            "Entity": "parámetro_x_industria"
+			          }
+			        },
+			        "parámetro_x_industria.parámetro_x_industria": {
+			          "Target": {
+			            "Entity": "parámetro_x_industria.parámetro_x_industria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "parámetro_x_industria"
+			            },
+			            "Name": {
+			              "Role": "parámetro_x_industria.parámetro_x_industria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "parámetro_x_industrias_are_names_IDs_of_parámetro_x_industrias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "parámetro_x_industria"
+			            },
+			            "Object": {
+			              "Role": "parámetro_x_industria.parámetro_x_industria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "parámetro_x_industrias_have_parámetro_x_industrias"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.ROI_var__dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_var__dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_var__dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ROI_var__dynamic"
 			        }
 			      ]
 			    },
