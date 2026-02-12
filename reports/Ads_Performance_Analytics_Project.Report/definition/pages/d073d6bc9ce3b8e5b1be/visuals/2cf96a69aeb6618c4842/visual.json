@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2cf96a69aeb6618c4842",
+  "position": {
+    "x": 0,
+    "y": 193.43283582089552,
+    "z": 3,
+    "height": 124.47761194029849,
+    "width": 344.54413892908832,
+    "tabOrder": 11000
+  },
+  "visualGroup": {
+    "displayName": "Grupo KPI Spend",
+    "groupMode": "ScaleMode"
+  }
+}

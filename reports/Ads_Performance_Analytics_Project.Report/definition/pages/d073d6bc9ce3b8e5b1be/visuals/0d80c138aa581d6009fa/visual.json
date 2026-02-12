@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Diagnóstico Detallado de Campañas",
+                    "value": "Diagnóstico de Rentabilidad",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "16pt"
@@ -30,7 +30,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "¿Cuáles son los factores específicos que están impulsando o frenando el ROI?",
+                    "value": "¿Dónde se esconden las mayores oportunidades de optimización del ROI?",
                     "textStyle": {
                       "fontFamily": "Segoe UI Light",
                       "fontSize": "11pt"

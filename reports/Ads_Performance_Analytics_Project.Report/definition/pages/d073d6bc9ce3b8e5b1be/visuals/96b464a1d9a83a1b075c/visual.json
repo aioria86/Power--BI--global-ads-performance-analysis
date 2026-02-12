@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "96b464a1d9a83a1b075c",
+  "position": {
+    "x": 0,
+    "y": 595.02116850127015,
+    "z": 6,
+    "height": 124.64013547840814,
+    "width": 344.65707027942426
+  },
+  "visualGroup": {
+    "displayName": "Grupo KPI Clicks",
+    "groupMode": "ScaleMode"
+  }
+}
