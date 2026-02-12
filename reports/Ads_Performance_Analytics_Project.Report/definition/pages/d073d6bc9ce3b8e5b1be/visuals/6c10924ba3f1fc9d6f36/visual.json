@@ -42,12 +42,13 @@
                       "Entity": "Dim_Calendar"
                     }
                   },
-                  "Property": "Day Name"
+                  "Property": "Day Name ES"
                 }
               },
-              "queryRef": "Dim_Calendar.Day Name",
-              "nativeQueryRef": "Day Name",
-              "active": true
+              "queryRef": "Dim_Calendar.Day Name ES",
+              "nativeQueryRef": "Día / Nro Semana",
+              "active": true,
+              "displayName": "Día / Nro Semana"
             }
           ]
         },

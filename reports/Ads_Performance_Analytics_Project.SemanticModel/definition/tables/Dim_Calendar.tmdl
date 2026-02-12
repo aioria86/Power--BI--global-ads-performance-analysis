@@ -119,6 +119,25 @@ table Dim_Calendar
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Day Name ES'
+		dataType: string
+		lineageTag: ca8f9c6a-dedd-4c3b-ba2e-30eb20b663c2
+		summarizeBy: none
+		sourceColumn: Day Name ES
+		sortByColumn: 'Nro Día Semana'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nro Día Semana'
+		dataType: string
+		lineageTag: 5b12fa1c-f7fe-4b9a-aff9-c579e8d2ce02
+		summarizeBy: none
+		sourceColumn: Nro Día Semana
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Calendar = m
 		mode: import
 		source =
@@ -156,9 +175,11 @@ table Dim_Calendar
 				
 				in
 				    AddDayType,
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Date", type date}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Date", type date}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Day Name ES", each Date.DayOfWeekName([Date], "es-ES")),
+				    #"Personalizada agregada1" = Table.AddColumn(#"Personalizada agregada", "Nro Día Semana", each Date.DayOfWeek([Date], Day.Monday) + 1)
 				in
-				    #"Tipo cambiado"
+				    #"Personalizada agregada1"
 
 	annotation PBI_NavigationStepName = Navegación
 
