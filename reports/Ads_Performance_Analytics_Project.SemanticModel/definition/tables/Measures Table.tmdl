@@ -338,13 +338,18 @@ table 'Measures Table'
 			// Capturamos la fecha de la fila/punto actual del gráfico
 			VAR FechaFila = SELECTEDVALUE('Dim_Calendar'[Date])
 			
-			// Cálculo base del ROI: (Revenue - Spend) / Spend
-			VAR ROI_Base = 
-			    DIVIDE(
-			        SUM(global_ads_performance[revenue]) - SUM(global_ads_performance[ad_spend]), 
-			        SUM(global_ads_performance[ad_spend]), 
-			        0
-			    )
+			// CALCULAMOS LOS COMPONENTES DENTRO DEL RANGO DINÁMICO
+			VAR Ingresos = CALCULATE(
+			    SUM(global_ads_performance[revenue]), 
+			    KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			)
+			VAR Gastos = CALCULATE(
+			    SUM(global_ads_performance[ad_spend]), 
+			    KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
+			)
+			
+			// CÁLCULO BASE DEL ROI: (Revenue - Spend) / Spend
+			VAR ROI_Dinamico = DIVIDE(Ingresos - Gastos, Gastos, 0)
 			
 			RETURN
 			IF(
@@ -352,14 +357,11 @@ table 'Measures Table'
 			    // LÓGICA PARA EL GRÁFICO (Eje X)
 			    IF(
 			        FechaFila > FechaInicio && FechaFila <= UltimaFechaGlobal,
-			        ROI_Base,
+			        DIVIDE(SUM(global_ads_performance[revenue]) - SUM(global_ads_performance[ad_spend]), SUM(global_ads_performance[ad_spend]), 0),
 			        BLANK() 
 			    ),
 			    // LÓGICA PARA LA TARJETA
-			    CALCULATE(
-			        ROI_Base,
-			        KEEPFILTERS('Dim_Calendar'[Date] > FechaInicio && 'Dim_Calendar'[Date] <= UltimaFechaGlobal)
-			    )
+			    ROI_Dinamico
 			)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
