@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 77.014925373134332,
-    "z": 1,
+    "z": 1000,
     "height": 107.46268656716418,
     "width": 802.38805970149258,
-    "tabOrder": 10002
+    "tabOrder": 5000
   },
   "visualGroup": {
     "displayName": "Grupo Filtros  Menu",

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b61cf8966c340cddd868",
+  "position": {
+    "x": 885.15024158752112,
+    "y": 477.69741877592065,
+    "z": 13000,
+    "height": 22.17322834645671,
+    "width": 369.88976377952758,
+    "tabOrder": 8000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Ganancia ON",
+    "groupMode": "ScaleMode"
+  }
+}

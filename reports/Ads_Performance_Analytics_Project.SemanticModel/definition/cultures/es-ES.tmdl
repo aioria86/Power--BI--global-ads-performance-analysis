@@ -2334,7 +2334,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Clics Totales": {
+			          "Clics": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2344,7 +2344,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Clics": {
+			          "Clics Totales": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2476,7 +2476,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Impresiones Totales": {
+			          "Impresiones": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2486,7 +2486,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Impresiones": {
+			          "Impresiones Totales": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6146,6 +6146,72 @@ cultureInfo es-ES
 			    }
 			  },
 			  "Relationships": {
+			    "tabla_periodos_dinamico_has_measures_table_ROI_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.ROI_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_ROI_delta_text_dynamic"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_ROI_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.ROI_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_ROI_delta_text_dynamic"
+			        }
+			      ]
+			    },
 			    "global_ads_performance_has_measures_table_ROI_var__dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "global_ads_performance"
@@ -11985,72 +12051,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "parámetro_x_industrias_have_parámetro_x_industrias"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_measures_table_ROI_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "measures_table.ROI_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_ROI_delta_text_dynamic"
-			        }
-			      ]
-			    },
-			    "tabla_periodos_dinamico_has_measures_table_ROI_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabla Periodos Dinamicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabla_periodos_dinamico": {
-			          "Target": {
-			            "Entity": "tabla_periodos_dinamico"
-			          }
-			        },
-			        "measures_table.ROI_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabla_periodos_dinamico"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabla_periodos_dinamicos_have_ROI_delta_text_dynamic"
 			        }
 			      ]
 			    },

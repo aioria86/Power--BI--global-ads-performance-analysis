@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "006a002d6a5753622525",
+  "position": {
+    "x": 885.14811031664954,
+    "y": 477.22165474974463,
+    "z": 15000,
+    "height": 22.2267620020429,
+    "width": 368.70275791624107,
+    "tabOrder": 5013
+  },
+  "visualGroup": {
+    "displayName": "Grupo Inversion ON",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

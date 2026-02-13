@@ -4,10 +4,10 @@
   "position": {
     "x": 353.13915857605178,
     "y": 461.87702265372172,
-    "z": 7,
+    "z": 7000,
     "height": 246.47249190938513,
     "width": 915.46925566343043,
-    "tabOrder": 21
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -154,9 +154,58 @@
               "queryRef": "Measures Table.Total Spend",
               "nativeQueryRef": "Inversión",
               "displayName": "Inversión"
+            },
+            {
+              "field": {
+                "SparklineData": {
+                  "Measure": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Measures Table"
+                        }
+                      },
+                      "Property": "Total Profit"
+                    }
+                  },
+                  "Groupings": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Dim_Calendar"
+                          }
+                        },
+                        "Property": "Date"
+                      }
+                    }
+                  ],
+                  "ApplyCalculationGroupTo": "Point"
+                }
+              },
+              "queryRef": "SparklineData(Measures Table.Total Profit_[Dim_Calendar.Date])",
+              "nativeQueryRef": "Ganancia en el periodo",
+              "displayName": "Ganancia en el periodo"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Measures Table"
+                  }
+                },
+                "Property": "Total Profit"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -199,6 +248,26 @@
                 {
                   "Literal": {
                     "Value": "'Google Ads'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'TikTok Ads'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Meta Ads'"
                   }
                 }
               ],
@@ -369,6 +438,44 @@
             }
           }
         }
+      ],
+      "sparklines": [
+        {
+          "properties": {
+            "chartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'line'"
+                }
+              }
+            },
+            "dataColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1B5E20'"
+                    }
+                  }
+                }
+              }
+            },
+            "markerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1B5E20'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "SparklineData(Measures Table.Total Profit_[Dim_Calendar.Date])"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -411,7 +518,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Resumen Operativo por Táctica y Canal'"
+                  "Value": "'Resumen Operativo ordenado por ganancia'"
                 }
               }
             },

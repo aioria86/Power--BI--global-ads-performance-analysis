@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 327.46268656716416,
-    "z": 3,
+    "z": 3000,
     "height": 124.4776119402985,
     "width": 344.77611940298505,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visualGroup": {
     "displayName": "Grupo KPI Impressions",

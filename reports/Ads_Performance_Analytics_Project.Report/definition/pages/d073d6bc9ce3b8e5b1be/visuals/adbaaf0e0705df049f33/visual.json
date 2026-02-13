@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "adbaaf0e0705df049f33",
+  "position": {
+    "x": 303.37007874015762,
+    "y": 2.0157480314960594,
+    "z": 2000,
+    "height": 20.157480314960651,
+    "width": 66.519685039369961,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Boton ROI",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "6245645aebf575ae5083"
+}

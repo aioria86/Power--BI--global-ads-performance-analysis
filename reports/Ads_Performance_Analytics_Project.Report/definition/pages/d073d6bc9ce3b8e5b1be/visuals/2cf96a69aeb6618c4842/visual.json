@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 193.43283582089552,
-    "z": 3,
+    "z": 3000,
     "height": 124.47761194029849,
     "width": 344.54413892908832,
-    "tabOrder": 11000
+    "tabOrder": 13000
   },
   "visualGroup": {
     "displayName": "Grupo KPI Spend",

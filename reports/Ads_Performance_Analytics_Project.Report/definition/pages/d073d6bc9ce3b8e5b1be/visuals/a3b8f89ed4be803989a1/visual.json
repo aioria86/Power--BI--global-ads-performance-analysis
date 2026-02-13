@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "a3b8f89ed4be803989a1",
+  "position": {
+    "x": 99.771591543183035,
+    "y": 0,
+    "z": 3000,
+    "height": 20.15748031496063,
+    "width": 89.7007874015748,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Boton Ganancia",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "6245645aebf575ae5083"
+}

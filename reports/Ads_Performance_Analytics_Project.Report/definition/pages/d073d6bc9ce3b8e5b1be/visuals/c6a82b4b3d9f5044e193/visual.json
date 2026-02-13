@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "c6a82b4b3d9f5044e193",
+  "position": {
+    "x": 201.91076115485566,
+    "y": 0,
+    "z": 1000,
+    "height": 22.17322834645671,
+    "width": 88.692913385826841,
+    "tabOrder": 1000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Boton Inversion",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "006a002d6a5753622525"
+}

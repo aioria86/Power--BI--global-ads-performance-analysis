@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 595.52238805970137,
-    "z": 5,
+    "z": 5000,
     "height": 124.4776119402985,
     "width": 343.88059701492534,
-    "tabOrder": 14000
+    "tabOrder": 11000
   },
   "visualGroup": {
     "displayName": "Grupo KPI CTR",
