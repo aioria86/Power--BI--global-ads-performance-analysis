@@ -1173,31 +1173,6 @@
               "objects": {}
             }
           },
-          "9e139222d831a39a55d1": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "0c1a7653b7a37bedda55",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Measures Table"
-                        }
-                      },
-                      "Property": "Titulo de Ultima Fecha"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "cardVisual",
-              "objects": {}
-            }
-          },
           "b18cc49825f14c8e2311": {
             "singleVisual": {
               "visualType": "shape",

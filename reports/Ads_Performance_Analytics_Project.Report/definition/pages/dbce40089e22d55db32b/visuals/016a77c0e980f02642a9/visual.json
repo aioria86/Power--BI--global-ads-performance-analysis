@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "016a77c0e980f02642a9",
   "position": {
-    "x": 0,
-    "y": 0,
+    "x": 4.4776119402985071,
+    "y": 5.3731343283582085,
     "z": 6000,
-    "height": 82.388059701492537,
-    "width": 1275.2238805970148,
-    "tabOrder": 2000
+    "height": 82.94943194475384,
+    "width": 1275.6916907997329,
+    "tabOrder": 10000
   },
   "visualGroup": {
     "displayName": "Grupo Encabezado",
