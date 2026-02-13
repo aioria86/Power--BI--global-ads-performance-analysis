@@ -128,6 +128,12 @@ table global_ads_performance
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Resultado Final' = "Conversión"
+		lineageTag: 6be540e0-e1bd-411a-bedc-0e1959216bd5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition global_ads_performance = m
 		mode: import
 		source =
