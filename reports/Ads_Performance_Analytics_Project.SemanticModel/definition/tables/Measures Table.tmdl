@@ -1458,6 +1458,10 @@ table 'Measures Table'
 			```
 		lineageTag: df667fc0-d725-440a-8ae6-e69fb6008cdf
 
+	measure 'CVR Complemento' = 1 - [Conversion Rate (CVR)]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b2a14d9b-1950-4ace-9c7f-5305cd9237ae
+
 	partition 'Measures Table' = m
 		mode: import
 		source =

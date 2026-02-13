@@ -4,7 +4,7 @@
   "position": {
     "x": 793.26860841423957,
     "y": 197.79935275080908,
-    "z": 9000,
+    "z": 10000,
     "height": 253.72168284789646,
     "width": 473.26860841423951,
     "tabOrder": 4000
@@ -110,7 +110,12 @@
                           "nullColoringStrategy": {
                             "strategy": {
                               "Literal": {
-                                "Value": "'asZero'"
+                                "Value": "'specificColor'"
+                              }
+                            },
+                            "color": {
+                              "Literal": {
+                                "Value": "'#FFFFFF'"
                               }
                             }
                           }

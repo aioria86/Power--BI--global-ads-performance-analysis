@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "3482f59fd2c66d5a10a4",
+  "position": {
+    "x": 318.63247863247869,
+    "y": 11.757012562381675,
+    "z": 2000,
+    "height": 274.87179487179486,
+    "width": 320,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Tiktok",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "3686a9130fc5d97474ac"
+}

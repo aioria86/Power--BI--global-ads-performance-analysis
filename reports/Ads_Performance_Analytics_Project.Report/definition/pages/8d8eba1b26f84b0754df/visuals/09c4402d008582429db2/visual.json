@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "09c4402d008582429db2",
+  "position": {
+    "x": 0,
+    "y": 17.227098032467154,
+    "z": 1000,
+    "height": 276.23931623931628,
+    "width": 320,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Grupo Google",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "3686a9130fc5d97474ac"
+}

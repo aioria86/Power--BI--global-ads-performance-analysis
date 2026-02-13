@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 461.49253731343276,
-    "z": 4000,
+    "z": 5000,
     "height": 124.4776119402985,
     "width": 344.77611940298505,
-    "tabOrder": 9000
+    "tabOrder": 13000
   },
   "visualGroup": {
     "displayName": "Grupo KPI Clicks",

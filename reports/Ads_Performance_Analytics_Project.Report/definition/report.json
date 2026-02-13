@@ -39,6 +39,10 @@
       }
     ]
   },
+  "publicCustomVisuals": [
+    "PBI_CV_73744D90_4DC9_4F18_8BA5_EE8FA5C98035",
+    "CircularGauge1458053128559"
+  ],
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -73,6 +77,21 @@
         {
           "name": "tik-tok9007414391924521.png",
           "path": "tik-tok9007414391924521.png",
+          "type": "Image"
+        },
+        {
+          "name": "google46472917334594244.png",
+          "path": "google46472917334594244.png",
+          "type": "Image"
+        },
+        {
+          "name": "tik-tok8578913848292817.png",
+          "path": "tik-tok8578913848292817.png",
+          "type": "Image"
+        },
+        {
+          "name": "meta2082398916317566.png",
+          "path": "meta2082398916317566.png",
           "type": "Image"
         }
       ]
