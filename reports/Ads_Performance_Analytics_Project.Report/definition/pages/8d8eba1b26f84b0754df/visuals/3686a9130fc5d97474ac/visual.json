@@ -4,9 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 3001,
+    "z": 0,
     "height": 475.45454545454544,
-    "width": 638.18181818181813
+    "width": 638.18181818181813,
+    "tabOrder": 3000
   },
   "visualGroup": {
     "displayName": "Grupo CVR por Plataforma",

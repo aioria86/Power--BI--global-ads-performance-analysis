@@ -1,18 +1,37 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "099844b44d19a702ba60",
+  "name": "7aa6e8d23c62c2970b19",
   "position": {
     "x": 352.599837000815,
-    "y": 194.03422982885084,
-    "z": 10000,
-    "height": 256.62591687041567,
+    "y": 464.22167889160551,
+    "z": 11001,
+    "height": 248.28035859820702,
     "width": 423.53708231458842,
-    "tabOrder": 5000
+    "tabOrder": 11001
   },
   "visual": {
-    "visualType": "funnel",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Calendar"
+                    }
+                  },
+                  "Property": "Date"
+                }
+              },
+              "queryRef": "Dim_Calendar.Date",
+              "nativeQueryRef": "Date",
+              "active": true
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -23,12 +42,12 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Impressions"
+                  "Property": "Total Revenue"
                 }
               },
-              "queryRef": "Measures Table.Total Impressions",
-              "nativeQueryRef": "Impresiones",
-              "displayName": "Impresiones"
+              "queryRef": "Measures Table.Total Revenue",
+              "nativeQueryRef": "Ingresos",
+              "displayName": "Ingresos"
             },
             {
               "field": {
@@ -38,28 +57,12 @@
                       "Entity": "Measures Table"
                     }
                   },
-                  "Property": "Total Clicks"
+                  "Property": "SpendNegativo"
                 }
               },
-              "queryRef": "Measures Table.Total Clicks",
-              "nativeQueryRef": "Clics",
-              "displayName": "Clics",
-              "format": "#,0.00"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Measures Table"
-                    }
-                  },
-                  "Property": "Total Conversions"
-                }
-              },
-              "queryRef": "Measures Table.Total Conversions",
-              "nativeQueryRef": "Conversiones",
-              "displayName": "Conversiones"
+              "queryRef": "Measures Table.SpendNegativo",
+              "nativeQueryRef": "Gastos",
+              "displayName": "Gastos"
             }
           ]
         }
@@ -68,62 +71,56 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Measures Table"
+                    "Entity": "Dim_Calendar"
                   }
                 },
-                "Property": "Total Impressions"
+                "Property": "Date"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "labels": [
+      "layout": [
         {
           "properties": {
-            "labelDisplayUnits": {
+            "seriesOrderReversed": {
               "expr": {
                 "Literal": {
-                  "Value": "1000D"
+                  "Value": "false"
                 }
               }
             },
-            "show": {
+            "stackedGapSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "0D"
+                }
+              }
+            },
+            "stackedGapExplodes": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "percentBarLabel": [
+      "legend": [
         {
           "properties": {
-            "show": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'Leyenda:'"
                 }
               }
             }
@@ -138,9 +135,76 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#01579B'"
+                      "Value": "'#263238'"
                     }
                   }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measures Table.Total Revenue"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0288D1'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Measures Table.SpendNegativo"
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "totals": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -155,7 +219,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Seguimiento de la brecha de rentabilidad y escalabilidad del presupuesto.'"
+                  "Value": "'Balance de Flujo: Ingresos vs. Inversión'"
                 }
               }
             },
@@ -189,7 +253,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Análisis de pérdida de usuarios desde el impacto inicial hasta el cierre.'"
+                  "Value": "'Relación diaria entre el capital invertido (negativo) y el retorno generado (positivo).'"
                 }
               }
             },

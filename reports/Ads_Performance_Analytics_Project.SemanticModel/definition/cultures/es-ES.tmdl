@@ -289,7 +289,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Plataforma / Campaña": {
+			          "Plataforma": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -299,7 +299,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Plataforma": {
+			          "Plataforma / Campaña": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2139,6 +2139,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "Ingreso Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ingresos": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6169,9 +6179,253 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "measures_table.spend_negativo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures Table",
+			          "ConceptualProperty": "SpendNegativo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "spend negativo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SpendNegativo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Gastos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "tabla_periodos_dinamico_has_measures_table_CVR_complemento": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.CVR_complemento": {
+			          "Target": {
+			            "Entity": "measures_table.CVR_complemento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.CVR_complemento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_CVR_complemento"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_CVR_complemento": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.CVR_complemento": {
+			          "Target": {
+			            "Entity": "measures_table.CVR_complemento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.CVR_complemento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_CVR_complemento"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_nro_día_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.nro_día_semana": {
+			          "Target": {
+			            "Entity": "dim_calendar.nro_día_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.nro_día_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_nro_día_semanas"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_day_name_ES": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.day_name_ES": {
+			          "Target": {
+			            "Entity": "dim_calendar.day_name_ES"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.day_name_ES"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_day_name_ESes"
+			        }
+			      ]
+			    },
+			    "parámetro_x_industria_has_parámetro_x_industria": {
+			      "Binding": {
+			        "ConceptualEntity": "Parámetro x Industria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "parámetro_x_industria": {
+			          "Target": {
+			            "Entity": "parámetro_x_industria"
+			          }
+			        },
+			        "parámetro_x_industria.parámetro_x_industria": {
+			          "Target": {
+			            "Entity": "parámetro_x_industria.parámetro_x_industria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "parámetro_x_industria"
+			            },
+			            "Object": {
+			              "Role": "parámetro_x_industria.parámetro_x_industria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "parámetro_x_industrias_have_parámetro_x_industrias"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "parámetro_x_industria"
+			            },
+			            "Name": {
+			              "Role": "parámetro_x_industria.parámetro_x_industria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "parámetro_x_industrias_are_names_IDs_of_parámetro_x_industrias"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_ROI_delta_text_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.ROI_delta_text_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.ROI_delta_text_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.ROI_delta_text_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_ROI_delta_text_dynamic"
+			        }
+			      ]
+			    },
 			    "tabla_periodos_dinamico_has_measures_table_ROI_delta_text_dynamic": {
 			      "Binding": {
 			        "ConceptualEntity": "Tabla Periodos Dinamicos"
@@ -12034,217 +12288,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "parámetro_x_industria_is_named_parámetro_x_industria": {
-			      "Binding": {
-			        "ConceptualEntity": "Parámetro x Industria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "parámetro_x_industria": {
-			          "Target": {
-			            "Entity": "parámetro_x_industria"
-			          }
-			        },
-			        "parámetro_x_industria.parámetro_x_industria": {
-			          "Target": {
-			            "Entity": "parámetro_x_industria.parámetro_x_industria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "parámetro_x_industria"
-			            },
-			            "Name": {
-			              "Role": "parámetro_x_industria.parámetro_x_industria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "parámetro_x_industrias_are_names_IDs_of_parámetro_x_industrias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "parámetro_x_industria"
-			            },
-			            "Object": {
-			              "Role": "parámetro_x_industria.parámetro_x_industria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "parámetro_x_industrias_have_parámetro_x_industrias"
-			        }
-			      ]
-			    },
-			    "global_ads_performance_has_measures_table_ROI_delta_text_dynamic": {
-			      "Binding": {
-			        "ConceptualEntity": "global_ads_performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "global_ads_performance": {
-			          "Target": {
-			            "Entity": "global_ads_performance"
-			          }
-			        },
-			        "measures_table.ROI_delta_text_dynamic": {
-			          "Target": {
-			            "Entity": "measures_table.ROI_delta_text_dynamic"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "global_ads_performance"
-			            },
-			            "Object": {
-			              "Role": "measures_table.ROI_delta_text_dynamic"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "global_ads_performances_have_ROI_delta_text_dynamic"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_day_name_ES": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "dim_calendar.day_name_ES": {
-			          "Target": {
-			            "Entity": "dim_calendar.day_name_ES"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "dim_calendar.day_name_ES"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_day_name_ESes"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_nro_día_semana": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "dim_calendar.nro_día_semana": {
-			          "Target": {
-			            "Entity": "dim_calendar.nro_día_semana"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "dim_calendar.nro_día_semana"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_nro_día_semanas"
-			        }
-			      ]
-			    },
-			    "dim_calendar_has_measures_table_CVR_complemento": {
-			      "Binding": {
-			        "ConceptualEntity": "Dim_Calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendar": {
-			          "Target": {
-			            "Entity": "dim_calendar"
-			          }
-			        },
-			        "measures_table.CVR_complemento": {
-			          "Target": {
-			            "Entity": "measures_table.CVR_complemento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendar"
-			            },
-			            "Object": {
-			              "Role": "measures_table.CVR_complemento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_CVR_complemento"
-			        }
-			      ]
-			    },
-			    "tabla_periodos_dinamico_has_measures_table_CVR_complemento": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabla Periodos Dinamicos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabla_periodos_dinamico": {
-			          "Target": {
-			            "Entity": "tabla_periodos_dinamico"
-			          }
-			        },
-			        "measures_table.CVR_complemento": {
-			          "Target": {
-			            "Entity": "measures_table.CVR_complemento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabla_periodos_dinamico"
-			            },
-			            "Object": {
-			              "Role": "measures_table.CVR_complemento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabla_periodos_dinamicos_have_CVR_complemento"
-			        }
-			      ]
-			    },
 			    "global_ads_performance_has_measures_table_CVR_complemento": {
 			      "Binding": {
 			        "ConceptualEntity": "global_ads_performance"
@@ -12275,6 +12318,105 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "global_ads_performances_have_CVR_complemento"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_measures_table_spend_negativo": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "measures_table.spend_negativo": {
+			          "Target": {
+			            "Entity": "measures_table.spend_negativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_negativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_spend_negativo"
+			        }
+			      ]
+			    },
+			    "tabla_periodos_dinamico_has_measures_table_spend_negativo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Periodos Dinamicos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_periodos_dinamico": {
+			          "Target": {
+			            "Entity": "tabla_periodos_dinamico"
+			          }
+			        },
+			        "measures_table.spend_negativo": {
+			          "Target": {
+			            "Entity": "measures_table.spend_negativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_periodos_dinamico"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_negativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_periodos_dinamicos_have_spend_negativo"
+			        }
+			      ]
+			    },
+			    "global_ads_performance_has_measures_table_spend_negativo": {
+			      "Binding": {
+			        "ConceptualEntity": "global_ads_performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "global_ads_performance": {
+			          "Target": {
+			            "Entity": "global_ads_performance"
+			          }
+			        },
+			        "measures_table.spend_negativo": {
+			          "Target": {
+			            "Entity": "measures_table.spend_negativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "global_ads_performance"
+			            },
+			            "Object": {
+			              "Role": "measures_table.spend_negativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "global_ads_performances_have_spend_negativo"
 			        }
 			      ]
 			    },

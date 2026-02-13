@@ -1462,6 +1462,11 @@ table 'Measures Table'
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: b2a14d9b-1950-4ace-9c7f-5305cd9237ae
 
+	measure SpendNegativo = [Total Spend] * -1
+		lineageTag: b08c1c34-412d-405e-8a66-68047cb92164
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition 'Measures Table' = m
 		mode: import
 		source =
